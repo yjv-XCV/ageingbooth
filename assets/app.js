@@ -119,12 +119,21 @@ $(document).ready(function(){
 		});
 
 		$('.home').on('click', function(){
-			$('.ui.basic.modal').modal('show');
+			$('.myModal').fadeTo(500,0.7);
 		});
 
 		$('#quit').on('click', function(){
 			$('section').hide();
+			$('.myModal').hide();
 			$('#sec01').show();
+		});
+
+		$('#cancel').on('click', function(){
+			$('.myModal').fadeOut(500);
+		});
+
+		$('.myModal').on('click', function(){
+			$('.myModal').fadeOut(500);
 		});
 
 		$('#snap').click(function(e){

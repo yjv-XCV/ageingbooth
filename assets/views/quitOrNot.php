@@ -1,13 +1,11 @@
-<div class="ui basic modal">
-	<div class="content">
+<div class="myModal">
+	<div class="center content">
     	<h2>Are you sure you want to quit?</h2>
-	</div>
-  	<div class="actions">
-	    <div id="quit" class="ui ok button">
+	    <div id="quit" class="ui button">
 	      Yes
 	    </div>
-    	<div class="ui cancel button">
-      		No
+		<div id="cancel" class="ui button">
+	  		No
 	    </div>
-    </div>
+	</div>
 </div>

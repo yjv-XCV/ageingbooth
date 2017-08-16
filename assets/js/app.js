@@ -80,8 +80,10 @@ $(document).ready(function(){
 		  context.scale(-1,-1);
 		  context.drawImage(cam_stream[0], -width/2, -height/2, width, height);
 
-		  $('#sec02').hide();
-		  $('#sec03').show();
+		  // temporary content
+		  // var model = $('#model');
+		  // context.drawImage(model[0], 0, 0);
+
 		  // Turn the canvas image into a dataURL that can be used as a src for our photo.
 		  return snap_canvas[0].toDataURL('image/' + filetype, quality);
 		};
@@ -152,6 +154,10 @@ $(document).ready(function(){
 
 		      // video.pause();
 		    }, 100);
+
+			$('#sec02').hide();
+			$('#sec03').show();
+
 		  });
 	};
 

@@ -2,12 +2,15 @@
 <html>
 	<head>
 		<title>Ageing Booth</title>
-		<link rel="stylesheet" href="assets/reset.css">
+		<link rel="stylesheet" href="vendor/reset.css">
 		<link rel="stylesheet" href="vendor/semantic.min.css">
-		<link rel="stylesheet" href="assets/style.css">
+		<link rel="stylesheet" href="assets/css/style.css">
 		<script src="/vendor/jquery-3.1.1.min.js"></script>
 		<script src="/vendor/semantic.min.js"></script>
-		<script src="/assets/app.js"></script>
+		<script src="/vendor/libs/pixi.js"></script>
+	    <script src='/vendor/libs/model_pca_20_svm.js'></script>
+	    <script src='/assets/js/model_pca_20_svm.js'></script>
+		<script src="/assets/js/app.js"></script>
 		<?php $pagePath = 'assets/views/';?>
 	</head>
 	<body>

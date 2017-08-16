@@ -17,6 +17,10 @@ video{
 	transform:rotate(90deg) scaleX(-1);
 }
 
+canvas{
+	margin-top:-140px;
+}
+
 .myModal{
 	background-color: black;
 	position:fixed;
@@ -33,15 +37,21 @@ video{
 	text-align: center;
 }
 
-.cam-view{
+.model{
+	position:absolute;
+	width:100%;
+	height: 1120px;
+	top:0px;
+}
+
+.fixOffset{
 	margin-left: -20px;
+}
+
+.view{
+	position:relative;
 	width: 100%;
 	margin-top: 300px;
-	height: 1120px;
-}
-.snapped-view{
-	width: 100%;
-	margin-top: 160px;
 	height: 1120px;
 }
 

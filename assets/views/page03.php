@@ -5,7 +5,7 @@
 	<div class="steps"></div>
 </div>
 <div class="view">
-	<div class="model"></div>
+	<!-- <div class="model"></div> -->
 	<canvas id="snap-canvas"></canvas>
 </div>
 

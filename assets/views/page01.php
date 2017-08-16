@@ -1,12 +1,107 @@
-<div class="photos">
-	<div class="flipping-photos"></div>
-	<div class="flipping-photos"></div>
-	<div class="flipping-photos"></div>
-	<div class="flipping-photos"></div>
-	<div class="flipping-photos"></div>
-	<div class="flipping-photos"></div>
-	<div class="flipping-photos"></div>
-	<div class="flipping-photos"></div>
+<div class="photos top">
+	<div class="photo">
+		<div class="ui shape">
+			<div class="sides">
+				<div class="active side">
+					<img src="imgs/original/002.png" alt="">
+				</div>
+				<div class="side">
+					<img src="imgs/original/003.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="photo">
+		<div class="ui shape">
+			<div class="sides">
+				<div class="active side">
+					<img src="imgs/original/002.png" alt="">
+				</div>
+				<div class="side">
+					<img src="imgs/original/003.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="photo">
+		<div class="ui shape">
+			<div class="sides">
+				<div class="active side">
+					<img src="imgs/original/002.png" alt="">
+				</div>
+				<div class="side">
+					<img src="imgs/original/003.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="photo">
+		<div class="ui shape">
+			<div class="sides">
+				<div class="active side">
+					<img src="imgs/original/002.png" alt="">
+				</div>
+				<div class="side">
+					<img src="imgs/original/003.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="photo">
+		<div class="ui shape">
+			<div class="sides">
+				<div class="active side">
+					<img src="imgs/original/002.png" alt="">
+				</div>
+				<div class="side">
+					<img src="imgs/original/003.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="photo">
+		<div class="ui shape">
+			<div class="sides">
+				<div class="active side">
+					<img src="imgs/original/002.png" alt="">
+				</div>
+				<div class="side">
+					<img src="imgs/original/003.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="photo">
+		<div class="ui shape">
+			<div class="sides">
+				<div class="active side">
+					<img src="imgs/original/002.png" alt="">
+				</div>
+				<div class="side">
+					<img src="imgs/original/003.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="photo">
+		<div class="ui shape">
+			<div class="sides">
+				<div class="active side">
+					<img src="imgs/original/002.png" alt="">
+				</div>
+				<div class="side">
+					<img src="imgs/original/003.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 <div class="welcome">
 	<div class="heading">
@@ -16,13 +111,108 @@
 		- TOUCH TO BEGIN -
 	</div>
 </div>
-<div class="photos">
-	<div class="flipping-photos"></div>
-	<div class="flipping-photos"></div>
-	<div class="flipping-photos"></div>
-	<div class="flipping-photos"></div>
-	<div class="flipping-photos"></div>
-	<div class="flipping-photos"></div>
-	<div class="flipping-photos"></div>
-	<div class="flipping-photos"></div>
+<div class="photos bottom">
+	<div class="photo">
+		<div class="ui shape">
+			<div class="sides">
+				<div class="active side">
+					<img src="imgs/original/002.png" alt="">
+				</div>
+				<div class="side">
+					<img src="imgs/original/003.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="photo">
+		<div class="ui shape">
+			<div class="sides">
+				<div class="active side">
+					<img src="imgs/original/002.png" alt="">
+				</div>
+				<div class="side">
+					<img src="imgs/original/003.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="photo">
+		<div class="ui shape">
+			<div class="sides">
+				<div class="active side">
+					<img src="imgs/original/002.png" alt="">
+				</div>
+				<div class="side">
+					<img src="imgs/original/003.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="photo">
+		<div class="ui shape">
+			<div class="sides">
+				<div class="active side">
+					<img src="imgs/original/002.png" alt="">
+				</div>
+				<div class="side">
+					<img src="imgs/original/003.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="photo">
+		<div class="ui shape">
+			<div class="sides">
+				<div class="active side">
+					<img src="imgs/original/002.png" alt="">
+				</div>
+				<div class="side">
+					<img src="imgs/original/003.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="photo">
+		<div class="ui shape">
+			<div class="sides">
+				<div class="active side">
+					<img src="imgs/original/002.png" alt="">
+				</div>
+				<div class="side">
+					<img src="imgs/original/003.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="photo">
+		<div class="ui shape">
+			<div class="sides">
+				<div class="active side">
+					<img src="imgs/original/002.png" alt="">
+				</div>
+				<div class="side">
+					<img src="imgs/original/003.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="photo">
+		<div class="ui shape">
+			<div class="sides">
+				<div class="active side">
+					<img src="imgs/original/002.png" alt="">
+				</div>
+				<div class="side">
+					<img src="imgs/original/003.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

@@ -5,6 +5,9 @@ section{
 	color:grey;
 	display:none;
 	text-align: center;
+	position:absolute;
+	top:0px;
+	left:0px;
 }
 
 section.active{

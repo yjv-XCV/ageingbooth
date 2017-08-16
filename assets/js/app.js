@@ -115,8 +115,10 @@ $(document).ready(function(){
 
 	var buttons = function() {
 		$('#sec01').on('click'/*Tap*/,function() {
-			$('#sec01').hide();
-			$('#sec02').show();	
+			$('#sec01').animate({
+				'opacity': '0',
+			},500);
+			$('#sec02').fadeIn(500);	
 			$('#snap').show();
 		});
 
@@ -125,9 +127,11 @@ $(document).ready(function(){
 		});
 
 		$('#quit').on('click', function(){
-			$('section').hide();
-			$('.myModal').hide();
-			$('#sec01').show();
+			$('#sec01').siblings().fadeOut(500);
+			$('.myModal').fadeOut(500);
+			$('#sec01').animate({
+				'opacity': '1',
+			},100);
 		});
 
 		$('#cancel').on('click', function(){

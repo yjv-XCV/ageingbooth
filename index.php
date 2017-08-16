@@ -10,8 +10,8 @@
 		<script src="/vendor/libs/pixi.js"></script>
 	    <script src='/vendor/libs/model_pca_20_svm.js'></script>
 	    <script src='/assets/js/model_pca_20_svm.js'></script>
-		<script src='/assets/js/app.js'></script>
 		<script src='/assets/js/screensaver.js'></script>
+		<script src='/assets/js/app.js'></script>
 		<?php $pagePath = 'assets/views/';?>
 	</head>
 	<body>

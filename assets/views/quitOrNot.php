@@ -1,11 +1,23 @@
-<div class="myModal">
-	<div class="center content">
-    	<h2>Are you sure you want to quit?</h2>
-	    <div id="quit" class="ui button">
-	      Yes
-	    </div>
-		<div id="cancel" class="ui button">
-	  		No
-	    </div>
+<div class="fixed myModal">
+	<div class="half-height full-width inline">
+		<div class="bottom full-width">
+			<div class="title">
+				Are you sure you want to quit?
+			</div>
+		</div>
+	</div>
+	<div class="half-width half-height inline">
+		<div class="center">
+			<div class="ui massive button" id="quit">
+				Yes
+			</div>
+		</div>
+	</div>
+	<div class="half-width half-height inline">
+		<div class="center">
+			<div class="ui massive button" id="cancel">
+				No
+			</div>
+		</div>
 	</div>
 </div>

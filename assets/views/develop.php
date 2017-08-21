@@ -7,12 +7,9 @@
 	</div>
 </div>
 <div class="view">
-	<div class="fixOffset">
-		<video id="cam-stream"></video>
-	</div>
-	<div class="fixed flex-center" id="countdown"></div>
+	<canvas width="840" height="1120" id="dev-image"></canvas>
+	<canvas width="840" height="1120" id="dev-overlay"></canvas>
 </div>
-<div class="ui button" id="snap">SNAP</div>
 
 
 

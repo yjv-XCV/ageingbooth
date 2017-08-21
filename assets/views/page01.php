@@ -113,72 +113,7 @@
 </div>
 <div class="photos bottom">
 	<div class="photo">
-		<div class="ui shape" id="id9">
-			<div class="sides">
-				<div class="active side">
-					<img src="imgs/original/002.png" alt="">
-				</div>
-				<div class="side">
-					<img src="imgs/original/003.png" alt="">
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="photo">
-		<div class="ui shape" id="id10">
-			<div class="sides">
-				<div class="active side">
-					<img src="imgs/original/002.png" alt="">
-				</div>
-				<div class="side">
-					<img src="imgs/original/003.png" alt="">
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="photo">
-		<div class="ui shape" id="id11">
-			<div class="sides">
-				<div class="active side">
-					<img src="imgs/original/002.png" alt="">
-				</div>
-				<div class="side">
-					<img src="imgs/original/003.png" alt="">
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="photo">
-		<div class="ui shape" id="id12">
-			<div class="sides">
-				<div class="active side">
-					<img src="imgs/original/002.png" alt="">
-				</div>
-				<div class="side">
-					<img src="imgs/original/003.png" alt="">
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="photo">
-		<div class="ui shape" id="id13">
-			<div class="sides">
-				<div class="active side">
-					<img src="imgs/original/002.png" alt="">
-				</div>
-				<div class="side">
-					<img src="imgs/original/003.png" alt="">
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="photo">
-		<div class="ui shape" id="id14">
+		<div class="ui shape" id="id16">
 			<div class="sides">
 				<div class="active side">
 					<img src="imgs/original/002.png" alt="">
@@ -204,7 +139,72 @@
 	</div>
 
 	<div class="photo">
-		<div class="ui shape" id="id16">
+		<div class="ui shape" id="id14">
+			<div class="sides">
+				<div class="active side">
+					<img src="imgs/original/002.png" alt="">
+				</div>
+				<div class="side">
+					<img src="imgs/original/003.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="photo">
+		<div class="ui shape" id="id13">
+			<div class="sides">
+				<div class="active side">
+					<img src="imgs/original/002.png" alt="">
+				</div>
+				<div class="side">
+					<img src="imgs/original/003.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="photo">
+		<div class="ui shape" id="id12">
+			<div class="sides">
+				<div class="active side">
+					<img src="imgs/original/002.png" alt="">
+				</div>
+				<div class="side">
+					<img src="imgs/original/003.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="photo">
+		<div class="ui shape" id="id11">
+			<div class="sides">
+				<div class="active side">
+					<img src="imgs/original/002.png" alt="">
+				</div>
+				<div class="side">
+					<img src="imgs/original/003.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="photo">
+		<div class="ui shape" id="id10">
+			<div class="sides">
+				<div class="active side">
+					<img src="imgs/original/002.png" alt="">
+				</div>
+				<div class="side">
+					<img src="imgs/original/003.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="photo">
+		<div class="ui shape" id="id9">
 			<div class="sides">
 				<div class="active side">
 					<img src="imgs/original/002.png" alt="">

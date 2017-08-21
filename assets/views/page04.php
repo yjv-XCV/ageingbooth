@@ -2,12 +2,15 @@
 	<div class="heading">
 		AGING BOOTH
 	</div>
-	<div class="steps"></div>
+	<div class="steps">
+		<?php include($pagePath .'step.php') ?>
+	</div>
 </div>
-<div class="snapped-view">
-	<canvas id="age-flexible"></canvas>
+<div class="view">
+	<canvas width="840" height="1120" id="image"></canvas>
+	<canvas width="840" height="1120" id="overlay"></canvas>
 </div>
 
 
 
-<div class="ui button home">HOME</div>
+<?php include($pagePath .'homeButton.php') ?>

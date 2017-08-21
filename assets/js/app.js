@@ -1,171 +1,81 @@
-$(document).ready(function(){
-
-	var init_cam = function() {
-
-		  // getUserMedia init
-		  navigator.getMedia = ( navigator.getUserMedia ||
-		                        navigator.webkitGetUserMedia ||
-		                        navigator.mozGetUserMedia ||
-		                        navigator.msGetUserMedia);
-
-		  if(!navigator.getMedia){
-		    alert("Your browser doesn't have support for the navigator.getUserMedia interface.");
-		  }
-
-		  // getUserMedia
-		  navigator.getMedia(
-		    {
-		      video: {
-		        width: { max: 1120 },
-		        height: { max: 840 }
-		      }
-		    },
-		    function(stream){
-		      var cam = $('#cam-stream');
-		      cam.attr('src', window.URL.createObjectURL(stream));
-		      cam[0].play();
-		    },
-		    // Error Callback
-		    function(err){
-		      alert("There was an error with accessing the camera stream: " + err.name, err);
-		    }
-		  );
-		};
-
-		var upload_image_data = function(filetype, imgdata) {
-		  var b64Data = imgdata.replace('data:image/' + filetype + ';base64,', '');
-		  var contentType = 'image/' + filetype;
-		  var blob = b64toBlob(b64Data, contentType);
-		  var fd = new FormData();
-		  var image_id = 'image' + new Date().getTime() + '.' + filetype;
-		  fd.append('fname', image_id);
-		  fd.append('data', blob);
-
-		  if (imgdata != null) {
-		    $.ajax({
-		      type: 'POST',
-		      url: '/assets/saveOriginal.php',
-		      data: fd,
-		      processData: false,
-		      contentType: false,
-		      success: function (msg) {
-		        console.log(msg);
-		      },
-		      error: function(xhr, status, msg) {
-		        console.log(status);
-		        console.log(msg);
-		      }
-		    });
-		  }
-		  return image_id;
-		}
+var homepage = function(){
+		$('#sec01').siblings('section').fadeOut(500);
+		$('.myModal').fadeOut(500);
+		$('#sec01').animate({
+			'opacity': '1',
+		},100);
+		homeFlag = 1;
+		$(stopInactivity);
+	}
 
 
-		var take_snapshot_from_cam_stream = function(filetype, quality){
 
-		  var cam_stream = $('#cam-stream');
-		  var snap_canvas = $('#snap-canvas'),
-		      context = snap_canvas[0].getContext('2d');
+var buttons = function() {
 
-		  var width = 1120;//video.videoWidth,
-		      height = 840;//video.videoHeight;
+	$('#sec01').on('click'/*Tap*/,function() {
+		$('#sec01').animate({
+			'opacity': '0',
+		},500);
+		$('#sec02').fadeIn(500);	
+		$('#snap').show();
+		homeFlag = 0;
+		$(startInactivity);
+	});
 
-		  // Setup a canvas with the same dimensions as the video.
-		  snap_canvas[0].width = height;
-		  snap_canvas[0].height = width;
+	$('.home').on('click', function(){
+		$('.myModal').fadeTo(500,0.7);
+	});
 
-		  // Make a copy of the current frame in the video on the canvas.
-		  context.translate(height/2, width/2);
-		  context.rotate(Math.PI/2);
-		  context.scale(-1,-1);
-		  context.drawImage(cam_stream[0], -width/2, -height/2, width, height);
+	$('#quit').on('click', function(){
+		$(homepage);
+	});
 
-		  // temporary content
-		  // var model = $('#model');
-		  // context.drawImage(model[0], 0, 0);
+	$('#cancel').on('click', function(){
+		$('.myModal').fadeOut(500);
+	});
 
-		  // Turn the canvas image into a dataURL that can be used as a src for our photo.
-		  return snap_canvas[0].toDataURL('image/' + filetype, quality);
-		};
+	$('.myModal').on('click', function(){
+		$('.myModal').fadeOut(500);
+	});
 
-	var b64toBlob = function(b64Data, contentType, sliceSize) {
-		  contentType = contentType || '';
-		  sliceSize = sliceSize || 512;
+	$('#retake').on('click', function(){
+		$('#snap').show();
+		$('#sec03').hide();
+		$('#sec02').show();
+	});
 
-		  var byteCharacters = atob(b64Data);
-		  var byteArrays = [];
+	$('#confirm').on('click', function(){
+		$('#sec03').hide();
+		$('#sec04').show();
+	});
 
-		  for (var offset = 0; offset < byteCharacters.length; offset += sliceSize) {
-		    var slice = byteCharacters.slice(offset, offset + sliceSize);
+	$('#snap').click(function(e){
 
-		    var byteNumbers = new Array(slice.length);
-		    for (var i = 0; i < slice.length; i++) {
-		      byteNumbers[i] = slice.charCodeAt(i);
-		    }
+	    e.preventDefault();
 
-		    var byteArray = new Uint8Array(byteNumbers);
+	    $('#snap').hide();
+	    $('#countdown').css('z-index','1').text('5');
+	    setTimeout(function(){$('#countdown').text('4')},1000);
+	    setTimeout(function(){$('#countdown').text('3')},1000);
+	    setTimeout(function(){$('#countdown').text('2')},3000);
+	    setTimeout(function(){$('#countdown').text('1')},4000);
+	    // console.log('3');
+	    // setTimeout(function(){ console.log('2'); }, 1000);
+	    // setTimeout(function(){ console.log('1'); }, 2000);
 
-		    byteArrays.push(byteArray);
-		  }
-		    
-		  var blob = new Blob(byteArrays, {type: contentType});
-		  return blob;
-		}
+	    setTimeout(function(){
+	      $('#countdown').css('z-index','-1').text('');
+	      snap = take_snapshot_from_cam_stream('jpeg');
+	      // image_id =  upload_image_data('jpeg', snap);
+		  $('#sec02').hide();
+		  $('#sec03').show();
+	      // video.pause();
+	    }, 5000);
 
 
-	var buttons = function() {
-		$('#sec01').on('click'/*Tap*/,function() {
-			$('#sec01').animate({
-				'opacity': '0',
-			},500);
-			$('#sec02').fadeIn(500);	
-			$('#snap').show();
-		});
+	  });
+};
 
-		$('.home').on('click', function(){
-			$('.myModal').fadeTo(500,0.7);
-		});
-
-		$('#quit').on('click', function(){
-			$('#sec01').siblings().fadeOut(500);
-			$('.myModal').fadeOut(500);
-			$('#sec01').animate({
-				'opacity': '1',
-			},100);
-		});
-
-		$('#cancel').on('click', function(){
-			$('.myModal').fadeOut(500);
-		});
-
-		$('.myModal').on('click', function(){
-			$('.myModal').fadeOut(500);
-		});
-
-		$('#snap').click(function(e){
-
-		    e.preventDefault();
-
-		    $('#snap').hide();
-		    // console.log('3');
-		    // setTimeout(function(){ console.log('2'); }, 1000);
-		    // setTimeout(function(){ console.log('1'); }, 2000);
-
-		    setTimeout(function(){
-		      $('#count321').text('');
-		      snap = take_snapshot_from_cam_stream('jpeg');
-		      image_id =  upload_image_data('jpeg', snap);
-
-		      // video.pause();
-		    }, 100);
-
-			$('#sec02').hide();
-			$('#sec03').show();
-
-		  });
-	};
-
-	$(init_cam);
-	$(buttons);
-
-});
+$(init_cam);
+$(buttons);
+// $(homepage);

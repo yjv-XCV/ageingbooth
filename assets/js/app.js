@@ -1,12 +1,12 @@
 var homepage = function(){
-		$('#sec01').siblings('section').fadeOut(500);
-		$('.myModal').fadeOut(500);
-		$('#sec01').animate({
-			'opacity': '1',
-		},100);
-		homeFlag = 1;
-		$(stopInactivity);
-	}
+	$('#sec01').siblings('section').fadeOut(500);
+	$('.myModal').fadeOut(500);
+	$('#sec01').animate({
+		'opacity': '1',
+	},100);
+	homeFlag = 1;
+	$(stopInactivity);
+}
 
 
 
@@ -71,11 +71,15 @@ var buttons = function() {
 		  $('#sec03').show();
 	      // video.pause();
 	    }, 5000);
+	});
 
+	$('#dev-overlay').on('click', function(){
+		area = [(120/372)*840, (95/422)*1120, 840-(120/372)*840*2, 300];
+		detect_face(area);
+	});
+}
 
-	  });
-};
-
-$(init_cam);
+// $(init_cam);
+$(flippingPhoto);
 $(buttons);
 // $(homepage);

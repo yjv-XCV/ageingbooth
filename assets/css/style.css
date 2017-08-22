@@ -150,6 +150,12 @@ img{
 	position:relative;
 }
 
+#overlay{
+	position:absolute;
+	top:0px;
+	left:120px;
+}
+
 #dev-overlay{
 	position:absolute;
 	top:0px;

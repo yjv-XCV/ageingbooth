@@ -6,6 +6,8 @@ var homepage = function(){
 	},100);
 	homeFlag = 1;
 	$(stopInactivity);
+
+	//clear overlay
 }
 
 
@@ -46,8 +48,13 @@ var buttons = function() {
 
 	$('#confirm').on('click', function(){
 		$('#sec03').hide();
+		// detect_face(area);
+		//detect-face, model, mesh
+		//loading
 		$('#sec04').show();
 	});
+
+
 
 	$('#snap').click(function(e){
 
@@ -73,13 +80,41 @@ var buttons = function() {
 	    }, 5000);
 	});
 
-	$('#dev-overlay').on('click', function(){
-		area = [(120/372)*840, (95/422)*1120, 840-(120/372)*840*2, 300];
-		detect_face(area);
+
+	area = [];
+	// Developing
+	var step = 1;
+	overlayName = '#dev-overlay';
+	$(overlayName).on('click', function(e){
+		// area = [(120/372)*840, (95/422)*1120, 840-(120/372)*840*2, 300];
+	    e.preventDefault();
+		//face ratio
+		//from eye and mouth estimate face size
+		switch(step){
+			case 1:
+				a = zz.cs.getCursorPosition($(overlayName)[0],e);
+				area[0] = a[0];
+				area[1] = a[1];
+				step++;
+				break;
+			case 2:
+				a = zz.cs.getCursorPosition($(overlayName)[0],e);
+				area[2] = a[0]-area[0];
+				area[3] = a[1]-area[1];
+				step++;
+				break;
+			case 3:
+				area[0] = area[0] - area[2]/6;
+				area[1] = area[1] - area[3];
+				area[2] = area[2]/3*4;
+				area[3] = area[3]*2.5;
+				detect_face(area);
+				step=1;
+				break;
+		}
 	});
 }
 
 // $(init_cam);
 $(flippingPhoto);
 $(buttons);
-// $(homepage);

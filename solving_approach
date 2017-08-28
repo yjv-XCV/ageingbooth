@@ -1,0 +1,5 @@
+1. Dynamic box to detect face, until a better result.
+2. Check the score, take coordinate, if higher score, take new coordinate
+3. Put model, mesh model coordinate to new coordinate.
+4. Put all the style and design.
+(The background need to deal with phoebe about the slicing.)

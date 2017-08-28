@@ -63,7 +63,7 @@ var buttons = function() {
 	    $('#snap').hide();
 	    $('#countdown').css('z-index','1').text('5');
 	    setTimeout(function(){$('#countdown').text('4')},1000);
-	    setTimeout(function(){$('#countdown').text('3')},1000);
+	    setTimeout(function(){$('#countdown').text('3')},2000);
 	    setTimeout(function(){$('#countdown').text('2')},3000);
 	    setTimeout(function(){$('#countdown').text('1')},4000);
 	    // console.log('3');

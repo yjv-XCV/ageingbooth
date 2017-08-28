@@ -36,3 +36,9 @@ reset if pressed, or in homepage
 Find Face
 Distort
 Overlay
+
+
+command line to serve
+
+cd /Users/yj/Desktop/Programming/jobs/ageingbooth/
+php -S localhost:8800 -t .

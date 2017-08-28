@@ -9,6 +9,7 @@ var ctracker = new clm.tracker({stopOnConvergence : true});
 var drawLoop = function(t){
   // console.log(t);
   requestAnimFrame(drawLoop);
+  overlay_cc.clearRect(0,0,840, 1120);
   ctracker.draw($('#dev-overlay')[0]);
 }
 var detect_face = function(box){
@@ -42,7 +43,7 @@ $(function(){
   $(image_img).load(function() {
     image_cc.drawImage(image_img, 0, 0, image_img.width, image_img.height);
   });
-  image_img.src = 'imgs/original/001.jpeg';
+  image_img.src = 'imgs/original/sample005.jpg';
 
 
 
@@ -57,12 +58,25 @@ $(function(){
   document.addEventListener("clmtrackrNotFound", function(event) {
     ctracker.stop();
     alert("The tracking had problems with finding a face in this image. Try selecting the face in the image manually.")
+    console.log('ctracker.getCurrentPosition()');
+    console.log(ctracker.getCurrentPosition());
+    console.log('ctracker.getCurrentParameters()');
+    console.log(ctracker.getCurrentParameters());
+    console.log('ctracker.getScore()');
+    console.log(ctracker.getScore());
   }, false);
 
   // detect if tracker loses tracking of face
   document.addEventListener("clmtrackrLost", function(event) {
     ctracker.stop();
     alert("The tracking had problems converging on a face in this image. Try selecting the face in the image manually.")
+    console.log('ctracker.getCurrentPosition()');
+    console.log(ctracker.getCurrentPosition());
+    console.log('ctracker.getCurrentParameters()');
+    console.log(ctracker.getCurrentParameters());
+    console.log('ctracker.getScore()');
+    console.log(ctracker.getScore());
+
   }, false);
 
   // detect if tracker has converged

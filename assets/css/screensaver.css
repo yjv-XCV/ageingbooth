@@ -1,0 +1,33 @@
+.myModal{
+	width: 1080px;
+	height: 1920px;
+	display:none;
+}
+
+.quitbackground{
+	background-color: white;
+	width: 1080px;
+	height: 1920px;
+	opacity: 0.5;
+}
+
+.flex-center{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.mybutton{
+	height:123px;
+	width:172px;
+	top:955px;
+	z-index: 3;
+}
+
+#yes{
+	left:322px;
+}
+
+#no{
+	left:580px;
+}

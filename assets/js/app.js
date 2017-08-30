@@ -25,18 +25,14 @@ var buttons = function() {
 	});
 
 	$('.home').on('click', function(){
-		$('.myModal').fadeTo(500,0.7);
+		$('.myModal').fadeIn(500);
 	});
 
-	$('#quit').on('click', function(){
+	$('#yes').on('click', function(){
 		$(homepage);
 	});
 
-	$('#cancel').on('click', function(){
-		$('.myModal').fadeOut(500);
-	});
-
-	$('.myModal').on('click', function(){
+	$('#no').on('click', function(){
 		$('.myModal').fadeOut(500);
 	});
 

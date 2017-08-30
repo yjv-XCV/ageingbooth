@@ -1,3 +1,7 @@
+<video class="screensaver" playsinline autoplay muted loop>
+	<source src="assets/videos/screensaver.mp4" type="video/mp4">
+</video>
+
 <div class="photos top">
 	<div class="photo">
 		<div class="ui shape" id="id1">
@@ -101,14 +105,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
-<div class="welcome">
-	<div class="heading">
-		AGING BOOTH
-	</div>
-	<div class="subheading">
-		- TOUCH TO BEGIN -
 	</div>
 </div>
 <div class="photos bottom">

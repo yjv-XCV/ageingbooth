@@ -7,10 +7,10 @@
 		<?php include($pagePath . 'scripts.php') ?>
 	</head>
 	<body>
-		<div class="background">
+		<video class="background" playsinline autoplay muted loop>
 			<?php include($pagePath .'background.php') ?>
-		</div>
-		<section id="sec01">
+		</video>
+		<section id="sec01" class="active">
 			<?php include($pagePath .'page01.php');?>
 		</section>
 		<section id="sec02">
@@ -25,9 +25,9 @@
 		<section id="sec05">
 			<?php include($pagePath .'page05.php');?>
 		</section>
-		<?php include($pagePath .'quitOrNot.php');?>
+		<?php include($pagePath .'quit_or_not.php');?>
 
-		<section id="develop" class="active">
+		<section id="develop">
 			<?php include($pagePath .'develop.php') ?>
 		</section>
 	</body>

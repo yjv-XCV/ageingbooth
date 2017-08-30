@@ -43,7 +43,7 @@ $(function(){
   $(image_img).load(function() {
     image_cc.drawImage(image_img, 0, 0, image_img.width, image_img.height);
   });
-  image_img.src = 'imgs/original/sample005.jpg';
+  image_img.src = 'imgs/original/sample002.jpg';
 
 
 

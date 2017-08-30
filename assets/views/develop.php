@@ -13,4 +13,4 @@
 
 
 
-<?php include($pagePath .'homeButton.php') ?>
+<?php include($pagePath .'home_button.php') ?>

@@ -14,4 +14,4 @@
 <div class="ui button" id="confirm">Confirm</div>
 
 
-<?php include($pagePath .'homeButton.php') ?>
+<?php include($pagePath .'home_button.php') ?>

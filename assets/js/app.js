@@ -70,8 +70,8 @@ var buttons = function() {
 	      $('#countdown').css('z-index','-1').text('');
 	      snap = take_snapshot_from_cam_stream('jpeg');
 	      // image_id =  upload_image_data('jpeg', snap);
-		  $('#sec02').hide();
 		  $('#sec03').show();
+		  $('#sec02').hide();
 	      // video.pause();
 	    }, 5000);
 	});
@@ -111,6 +111,6 @@ var buttons = function() {
 	});
 }
 
-// $(init_cam);
+$(init_cam);
 $(flippingPhoto);
 $(buttons);

@@ -14,8 +14,8 @@ var init_cam = function() {
 		  navigator.getMedia(
 		    {
 		      video: {
-		        width: { max: 1120 },
-		        height: { max: 840 }
+		        width: { max: 1012 },
+		        height: { max: 740 }
 		      }
 		    },
 		    function(stream){
@@ -38,8 +38,8 @@ var take_snapshot_from_cam_stream = function(filetype, quality){
       context = snap_canvas[0].getContext('2d'),
       context2 = snap_canvas2[0].getContext('2d');
 
-  var width = 1120;//video.videoWidth,
-      height = 840;//video.videoHeight;
+  var width = 1012;//video.videoWidth,
+      height = 740;//video.videoHeight;
 
   // Setup a canvas with the same dimensions as the video.
   snap_canvas[0].width = height;

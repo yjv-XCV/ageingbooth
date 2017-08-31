@@ -3,7 +3,7 @@
 		<video id="cam-stream"></video>
 		<div class="fixed flex-center" id="countdown"></div>
 		<div class="mybutton2" id="snap"></div>
-		<div class="home"></div>
+		<div class="mybutton3 home"></div>
 	</div>
 
 
@@ -11,14 +11,26 @@
 		<canvas id="snap-canvas"></canvas>
 		<div class="mybutton2"  id="retake"></div>
 		<div class="mybutton2"  id="confirm"></div>
-		<div class="home"></div>
+		<div class="mybutton3 home"></div>
 	</div>
 
 
 	<div id="page4">
 		<canvas width="840" height="1120" id="image"></canvas>
+		<canvas width="420" height="1120" id="half-face"></canvas>
 		<canvas width="840" height="1120" id="overlay"></canvas>
-		<div class="home"></div>
+		<div id="divider">
+			<img src="assets/imgs/divider.png"></img>
+		</div>
+		<div class="toggle" id="smoking">
+			
+		</div>
+		<div class="toggle" id="uv">
+			
+		</div>
+		<div class="mybutton3 home"></div>
+		<div class="mybutton3" id="retry"></div>
+		<div class="mybutton3" id="done"></div>
 	</div>
 
 	<div id="page5">

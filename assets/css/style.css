@@ -32,6 +32,7 @@ canvas{
 img{
 	width:100%;
 	z-index: 1;
+	height:100%;
 }
 
 .center{
@@ -68,6 +69,11 @@ img{
 	width:375px;
 }
 
+.mybutton3{
+	width:120px;
+	height:115px;
+}
+
 #sec01{
 	position:relative;
 }
@@ -85,8 +91,6 @@ img{
 	position:fixed;
 	top:1730px;
 	left:35px;
-	width:120px;
-	height:115px;
 }
 
 .full-width{
@@ -123,6 +127,13 @@ img{
 	display:flex;
     flex-direction: column;
 	justify-content: center;
+}
+
+.toggle{
+	position:fixed;
+	height:55px;
+	width:55px;
+	top:1640px;
 }
 
 #countdown{
@@ -166,4 +177,38 @@ img{
 	position:fixed;
 	top:1520px;
 	left:575px;
+}
+
+#retry{
+	position:fixed;
+	top:1730px;
+	left:188px;
+}
+
+#done{
+	position:fixed;
+	top:1730px;
+	left:925px;
+}
+
+#smoking{
+	left:141px;
+}
+
+#uv{
+	left:635px;
+}
+
+#divider{
+	position:fixed;
+	top:465px;
+	left:165px;
+	z-index:5;
+	width: 740px;
+	height:1012px;
+}
+
+#divider img{
+	height:100%;
+	width:10%;
 }

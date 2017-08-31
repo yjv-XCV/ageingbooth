@@ -11,12 +11,12 @@ var homepage = function(){
 }
 
 var showpage = function(page){
-	page.show();
-	page.siblings().hide();
 	number = page.attr('id').substr(4);
 	if(number == 2)$('#snap').show();
 	path = 'assets/imgs/page0' + number + '.png';
 	$('img.background').attr('src', path);
+	page.show();
+	page.siblings().hide(100);
 }
 
 var buttons = function() {
@@ -54,6 +54,17 @@ var buttons = function() {
 		showpage($('#page4'));
 	});
 
+	$('#done').on('click', function(){
+		showpage($('#page5'));
+		setTimeout(function(){
+			$(homepage);
+		},5000);
+	});
+
+	$('#retry').on('click', function(){
+		showpage($('#page2'));
+	});
+
 
 
 	$('#snap').click(function(e){
@@ -75,15 +86,20 @@ var buttons = function() {
 	      snap = take_snapshot_from_cam_stream('jpeg');
 	      // image_id =  upload_image_data('jpeg', snap);
   	      // video.pause();
-	    }, 4800);
-
-	    setTimeout(function(){
 	      //show page 3 things
 	      //hide page 2 things
 	      showpage($('#page3'));
-		}, 5000);
+	    }, 5000);
+
 	});
 
+	$('#uv').on('click', function(){
+		$(this).toggleClass('active');
+	});
+
+	$('#smoking').on('click', function(){
+		$(this).toggleClass('active');
+	});
 
 	area = [];
 	// Developing

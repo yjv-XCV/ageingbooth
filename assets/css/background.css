@@ -16,18 +16,6 @@ video.screensaver{
 	left:0px;
 }
 
-#sec02{
-	background-image: url('../imgs/page02.png');
-}
-
-#sec03{
-	background-image: url('../imgs/page03.png');
-}
-
-#sec04{
-	background-image: url('../imgs/page04.png');
-}
-
-#sec05{
-	background-image: url('../imgs/page05.png');
+img.background{
+	z-index: -1;
 }

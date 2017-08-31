@@ -10,7 +10,14 @@ var homepage = function(){
 	//clear overlay
 }
 
-
+var showpage = function(page){
+	page.show();
+	page.siblings().hide();
+	number = page.attr('id').substr(4);
+	if(number == 2)$('#snap').show();
+	path = 'assets/imgs/page0' + number + '.png';
+	$('img.background').attr('src', path);
+}
 
 var buttons = function() {
 
@@ -18,8 +25,8 @@ var buttons = function() {
 		$('#sec01').animate({
 			'opacity': '0',
 		},500);
+		showpage($('#page2'));
 		$('#sec02').fadeIn(500);	
-		$('#snap').show();
 		homeFlag = 0;
 		$(startInactivity);
 	});
@@ -37,23 +44,20 @@ var buttons = function() {
 	});
 
 	$('#retake').on('click', function(){
-		$('#snap').show();
-		$('#sec03').hide();
-		$('#sec02').show();
+		showpage($('#page2'));
 	});
 
 	$('#confirm').on('click', function(){
-		$('#sec03').hide();
 		// detect_face(area);
 		//detect-face, model, mesh
 		//loading
-		$('#sec04').show();
+		showpage($('#page4'));
 	});
 
 
 
 	$('#snap').click(function(e){
-
+		//page 2 to page 3
 	    e.preventDefault();
 
 	    $('#snap').hide();
@@ -70,10 +74,14 @@ var buttons = function() {
 	      $('#countdown').css('z-index','-1').text('');
 	      snap = take_snapshot_from_cam_stream('jpeg');
 	      // image_id =  upload_image_data('jpeg', snap);
-		  $('#sec03').show();
-		  $('#sec02').hide();
-	      // video.pause();
-	    }, 5000);
+  	      // video.pause();
+	    }, 4800);
+
+	    setTimeout(function(){
+	      //show page 3 things
+	      //hide page 2 things
+	      showpage($('#page3'));
+		}, 5000);
 	});
 
 

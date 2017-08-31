@@ -11,24 +11,11 @@
 			<?php include($pagePath .'background.php') ?>
 		</video>
 		<section id="sec01" class="active">
-			<?php include($pagePath .'page01.php');?>
+			<?php include($pagePath .'screensaver.php');?>
 		</section>
 		<section id="sec02">
-			<?php include($pagePath .'page02.php');?>
-		</section>
-		<section id="sec03">
-			<?php include($pagePath .'page03.php');?>
-		</section>
-		<section id="sec04">
-			<?php include($pagePath .'page04.php');?>
-		</section>
-		<section id="sec05">
-			<?php include($pagePath .'page05.php');?>
+			<?php include($pagePath .'working.php');?>
 		</section>
 		<?php include($pagePath .'quit_or_not.php');?>
-
-		<section id="develop">
-			<?php include($pagePath .'develop.php') ?>
-		</section>
 	</body>
 </html>

@@ -20,5 +20,5 @@ canvas#output{
 canvas#buffer{
 	left:0px;
 	top:0px;
-	z-index:-3;
+	display:none;
 }

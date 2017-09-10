@@ -11,9 +11,9 @@ var flippingPhoto = setInterval(function(){
 
 
 $(function(){
-	var outputCanvas = $('#output')[0],
+	var outputCanvas = document.getElementById('output'),
 	output = outputCanvas.getContext('2d'),
-	bufferCanvas = $('#buffer')[0],
+	bufferCanvas = document.getElementById('buffer'),
 	buffer = bufferCanvas.getContext('2d'),
 	video = document.getElementById('screensaver'),
 	alpha = document.getElementById('alpha'),
@@ -30,12 +30,13 @@ $(function(){
 	    alphaData = buffer.getImageData(0, height, width, height).data;
 	 
 	    for (var i = 3, len = imageData.length; i < len; i = i + 4) {
-		    imageData[i] = alphaData[i-1];
+	    imageData[i] = alphaData[i-1];
 	    }
 	 
 	    output.putImageData(image, 0, 0, 0, 0, width, height);
 	    }
+
 	setInterval(function(){
-		processFrame();
-	}, 100);
+	    processFrame();
+	},100);
 });

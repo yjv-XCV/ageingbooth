@@ -21,6 +21,9 @@ var showpage = function(page){
 
 var buttons = function() {
 
+	$('#uv img').hide();
+	$('#smoking img').hide();
+
 	$('#sec01').on('click'/*Tap*/,function() {
 		$('#sec01').animate({
 			'opacity': '0',
@@ -29,6 +32,14 @@ var buttons = function() {
 		$('#sec02').fadeIn(500);	
 		homeFlag = 0;
 		$(startInactivity);
+	});
+
+	$('#slider').slider({
+		slide: function(event, ui){
+			console.log(ui.value);
+			//alpha value
+		}
+
 	});
 
 	$('.home').on('click', function(){
@@ -94,44 +105,13 @@ var buttons = function() {
 	});
 
 	$('#uv').on('click', function(){
-		$(this).toggleClass('active');
+		$(this).toggleClass('dot');
+		//add or remove the overlay
 	});
 
 	$('#smoking').on('click', function(){
-		$(this).toggleClass('active');
-	});
-
-	area = [];
-	// Developing
-	var step = 1;
-	overlayName = '#dev-overlay';
-	$(overlayName).on('click', function(e){
-		// area = [(120/372)*840, (95/422)*1120, 840-(120/372)*840*2, 300];
-	    e.preventDefault();
-		//face ratio
-		//from eye and mouth estimate face size
-		switch(step){
-			case 1:
-				a = zz.cs.getCursorPosition($(overlayName)[0],e);
-				area[0] = a[0];
-				area[1] = a[1];
-				step++;
-				break;
-			case 2:
-				a = zz.cs.getCursorPosition($(overlayName)[0],e);
-				area[2] = a[0]-area[0];
-				area[3] = a[1]-area[1];
-				step++;
-				break;
-			case 3:
-				area[0] = area[0] - area[2]/6;
-				area[1] = area[1] - area[3];
-				area[2] = area[2]/3*4;
-				area[3] = area[3]*2.5;
-				detect_face(area);
-				step=1;
-				break;
-		}
+		$(this).toggleClass('dot');
+		//add or remove the overlay
 	});
 }
 

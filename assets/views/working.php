@@ -17,16 +17,17 @@
 
 	<div id="page4">
 		<canvas width="840" height="1120" id="image"></canvas>
-		<canvas width="420" height="1120" id="half-face"></canvas>
 		<canvas width="840" height="1120" id="overlay"></canvas>
+		<canvas width="420" height="1120" id="half-face"></canvas>
 		<div id="divider">
 			<img src="assets/imgs/divider.png"></img>
 		</div>
+		<div id="slider">
+			<div id="slider-handle" class="ui-slider-handle"></div>
+		</div>
 		<div class="toggle" id="smoking">
-			
 		</div>
 		<div class="toggle" id="uv">
-			
 		</div>
 		<div class="mybutton3 home"></div>
 		<div class="mybutton3" id="retry"></div>

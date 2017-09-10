@@ -21,7 +21,7 @@ for(var i in pModel.path.normal) {
         var p = pModel.shapeModel.meanShape[n];
         console.log(p);
 
-        line.lineTo(p[0]*ratio-25, p[1]*ratio+20);
+        line.lineTo(p[0]*ratio-25, p[1]*ratio+220);
     }
 }
 app.stage.addChild(line);

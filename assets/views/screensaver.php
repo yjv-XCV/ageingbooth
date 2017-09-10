@@ -1,6 +1,12 @@
-<video class="screensaver" playsinline autoplay muted loop>
-	<source src="assets/videos/screensaver.mp4" type="video/mp4">
+<video id="screensaver" style="display:none" autoplay>
+	<source src="assets/videos/screensaver.mp4" type="video/mp4; codecs='avc1.42E01E'" />
 </video>
+<video id="alpha" style="display:none" autoplay>
+	<source src="assets/videos/screensaver_alpha.mp4" type="video/mp4; codecs='avc1.42E01E'" />
+</video>
+<canvas width="1080" height="3840" id="buffer"></canvas>
+<canvas width="1080" height="1920" id="output"></canvas>
+
 
 <div class="photos top">
 	<div class="photo">

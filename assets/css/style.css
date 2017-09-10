@@ -32,7 +32,6 @@ canvas{
 img{
 	width:100%;
 	z-index: 1;
-	height:100%;
 }
 
 .center{
@@ -105,6 +104,14 @@ img{
 	height:50%;
 }
 
+#slider{
+    position: relative;
+    top: 1530px;
+    left: 115px;
+    height: 25px;
+    width: 795px;
+}
+
 .inline{
 	display:inline-block;
 	position:relative;
@@ -133,7 +140,13 @@ img{
 	position:fixed;
 	height:55px;
 	width:55px;
-	top:1640px;
+	top:1649px;
+}
+
+.dot:before {
+  content: ' \25CF';
+  font-size: 63px;
+  color:#FF1111;
 }
 
 #countdown{
@@ -192,11 +205,11 @@ img{
 }
 
 #smoking{
-	left:141px;
+	left:140px;
 }
 
 #uv{
-	left:635px;
+	left:633px;
 }
 
 #divider{
@@ -211,4 +224,16 @@ img{
 #divider img{
 	height:100%;
 	width:10%;
+}
+
+#slider-handle{
+	position:absolute;
+	width:70px;
+	height: 70px;
+	background-image: url('../imgs/btn_slider.png');
+	background-size: 70px 70px;
+}
+
+#slider-handle:focus{
+	outline:none;
 }

@@ -55,7 +55,11 @@ $(function(){
     console.log(ctracker.getScore());
     tcs = ctracker.getCurrentPosition()
     ctracker.stop();
-  }, false);
+  }, function(){
+    ageing.launch();
+    uv.launch();
+    smoking.launch();
+  });
 
 });
 

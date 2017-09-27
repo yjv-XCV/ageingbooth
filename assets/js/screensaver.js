@@ -38,5 +38,5 @@ $(function(){
 
 	setInterval(function(){
 	    processFrame();
-	},100);
+	},1000);
 });

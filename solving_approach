@@ -1,8 +1,13 @@
-1. Detect face
-	1.1 Select eyes
-2. Mapping Ageing
-3. Slider,smoking,uv
-4. save, screensaver
-5. screensaver background
+1. Face Detect and Overlay
+2. Half original cover (page 4)
+3. Control, age, uv and smoking
+4. Capture complete and save image
+5. Spritesheet
 
-clear mask
+1. Mesh overlay (Ageing) show
+2. Mesh overlay (UV) hide
+3. Mesh overlay (Smoking) hide
+	3.1 Draw half face 
+4. Alpha value change when slider slides.
+5. Draw Original, and meshed overlay on the last canvas.
+6. Save last canvas.

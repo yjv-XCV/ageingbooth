@@ -87,3 +87,25 @@ var b64toBlob = function(b64Data, contentType, sliceSize) {
   var blob = new Blob(byteArrays, {type: contentType});
   return blob;
 }
+
+var original_half = function(){
+
+  var cam_stream = $('#cam-stream');
+
+  var half = $('#half-face'),
+      context = half[0].getContext('2d');
+
+  var width = 1012;//video.videoWidth,
+      height = 740;//video.videoHeight;
+
+  // Setup a canvas with the same dimensions as the video.
+  half[0].width = height/2;
+  half[0].height = width;
+
+  // Make a copy of the current frame in the video on the canvas.
+  context.translate(height/2, width/2);
+  context.rotate(Math.PI/2);
+  context.scale(-1,-1);
+  context.drawImage(cam_stream[0], 0, 0, width, height/3, -width/2, -height/2, width*1.55, height*0.50);
+
+}

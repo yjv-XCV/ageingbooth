@@ -1,6 +1,7 @@
 <div>
 	<div id="page2">
 		<video id="cam-stream"></video>
+		<canvas width="740" height="1012" id="face-temp"></canvas>
 		<div class="fixed flex-center" id="countdown"></div>
 		<div class="mybutton2" id="snap"></div>
 		<div class="mybutton3 home"></div>
@@ -8,7 +9,7 @@
 
 
 	<div id="page3">
-		<canvas id="snap-canvas"></canvas>
+		<canvas width="740" height="1012" id="snap-canvas"></canvas>
 		<div class="mybutton2"  id="retake"></div>
 		<div class="mybutton2"  id="confirm"></div>
 		<div class="mybutton3 home"></div>
@@ -16,9 +17,11 @@
 
 
 	<div id="page4">
-		<canvas width="840" height="1120" id="image"></canvas>
-		<canvas width="840" height="1120" id="overlay"></canvas>
-		<canvas width="420" height="1120" id="half-face"></canvas>
+		<canvas width="740" height="1012" id="image"></canvas>
+		<!-- <canvas width="740" height="1012" id="overlay"></canvas> -->
+		<!-- <canvas width="740" height="1012" style="display:none;" id="uv-overlay"></canvas> -->
+		<!-- <canvas width="740" height="1012" style="display:none;" id="smoking-overlay"></canvas> -->
+		<canvas width="370" height="1012" id="half-face"></canvas>
 		<div id="divider">
 			<img src="assets/imgs/divider.png"></img>
 		</div>

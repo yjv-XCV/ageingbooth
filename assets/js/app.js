@@ -36,9 +36,13 @@ var buttons = function() {
 	});
 
 	$('#slider').slider({
+		value: 100,
 		slide: function(event, ui){
-			console.log(ui.value);
+			console.log(ui.value * 0.01 * 0.5);
 			//alpha value
+			if(typeof ageing.ageingOverlay != "undefined")ageing.ageingOverlay.alpha = (ui.value * 0.01 * 0.5);
+			if(typeof uv.ageingOverlay != "undefined")uv.ageingOverlay.alpha = (ui.value * 0.01 * 0.5);
+			if(typeof smoking.ageingOverlay != "undefined")smoking.ageingOverlay.alpha = (ui.value * 0.01 * 0.5);
 		}
 
 	});
@@ -60,16 +64,20 @@ var buttons = function() {
 	});
 
 	$('#confirm').on('click', function(){
-		//detect_face(area);
+		var box = [81, 115, 550, 588];
+		detect_face(box);
 		//detect-face, model, mesh
 		//loading
 		showpage($('#page4'));
 	});
 
 	$('#done').on('click', function(){
+		snap = last_snap('jpeg');
+		image_id = upload_image_data('jpeg', snap)
 		showpage($('#page5'));
 		setTimeout(function(){
 			$(homepage);
+			$('#slider').slider({value:100});
 		},5000);
 	});
 
@@ -120,7 +128,6 @@ var init = function(){
 	var face_template = new Image();
 	$(face_template).load(function() {
 	    face_template_cc.drawImage(face_template, 0, 0, 740, 1012);
-	    console.log("done");
 	});
 	face_template.src = 'assets/imgs/face_template.png';
 	console.log(face_template.src);

@@ -18,10 +18,10 @@
 
 	<div id="page4">
 		<canvas width="740" height="1012" id="image"></canvas>
-		<!-- <canvas width="740" height="1012" id="overlay"></canvas> -->
-		<!-- <canvas width="740" height="1012" style="display:none;" id="uv-overlay"></canvas> -->
-		<!-- <canvas width="740" height="1012" style="display:none;" id="smoking-overlay"></canvas> -->
-		<canvas width="370" height="1012" id="half-face"></canvas>
+		<canvas width="740" height="1012" style="z-index: 7;" id="overlay"></canvas>
+		<canvas width="740" height="1012" style="display:none;z-index: 8;" id="uv-overlay"></canvas>
+		<canvas width="740" height="1012" style="display:none;z-index: 8;" id="smoking-overlay"></canvas>
+		<canvas width="370" height="1012" id="half-face" style="z-index:9;"></canvas>
 		<div id="divider">
 			<img src="assets/imgs/divider.png"></img>
 		</div>
@@ -38,7 +38,7 @@
 	</div>
 
 	<div id="page5">
-		<canvas id="age-70"></canvas>
+		<canvas id="last"></canvas>
 	</div>
 </div>
 <img class="background" src="assets/imgs/page02.png"></img>

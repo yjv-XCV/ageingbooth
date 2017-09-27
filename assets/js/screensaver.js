@@ -1,4 +1,6 @@
 i = 0;
+imgae_ids = [];
+
 var flippingPhoto = setInterval(function(){
 						number = parseInt(Math.random()*1000);
 						number = number % 11 + 2;

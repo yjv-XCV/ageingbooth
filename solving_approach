@@ -1,13 +1,3 @@
-1. Face Detect and Overlay
-2. Half original cover (page 4)
-3. Control, age, uv and smoking
-4. Capture complete and save image
-5. Spritesheet
-
-1. Mesh overlay (Ageing) show
-2. Mesh overlay (UV) hide
-3. Mesh overlay (Smoking) hide
-	3.1 Draw half face 
-4. Alpha value change when slider slides.
-5. Draw Original, and meshed overlay on the last canvas.
-6. Save last canvas.
+1. Overlay
+2. Capture complete and save image
+3. Spritesheet

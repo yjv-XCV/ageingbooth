@@ -1,7 +1,7 @@
 var homeFlag = 1;
 var inactivity;
 var startInactivity = function(){
-		inactivity = setTimeout(function(){
+	inactivity = setTimeout(function(){
 					$(homepage);
 				},60000);
 	}

@@ -6,9 +6,6 @@ var homepage = function(){
 	},100);
 	homeFlag = 1;
 	$(stopInactivity);
-	// showpage($('#page2'));
-
-	//clear overlay
 }
 
 var showpage = function(page){
@@ -31,7 +28,7 @@ var buttons = function() {
 		},500);
 		showpage($('#page2'));
 		$('#sec02').fadeIn(500);	
-		homeFlag = 0;
+		// homeFlag = 0;
 		$(startInactivity);
 	});
 
@@ -73,11 +70,11 @@ var buttons = function() {
 
 	$('#done').on('click', function(){
 		snap = last_snap('jpeg');
-		image_id = upload_image_data('jpeg', snap)
+		// image_id = upload_image_data('jpeg', snap);
 		showpage($('#page5'));
+		$('#slider').slider({value:100});
 		setTimeout(function(){
 			$(homepage);
-			$('#slider').slider({value:100});
 		},5000);
 	});
 

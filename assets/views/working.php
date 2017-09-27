@@ -1,3 +1,8 @@
+<div id="steps" >
+	<div class="step" id="step1"></div>	
+	<div class="step" id="step2"></div>	
+	<div class="step" id="step3"></div>	
+</div>
 <div>
 	<div id="page2">
 		<video id="cam-stream"></video>
@@ -23,7 +28,7 @@
 		<div width="740" height="1012" style="display: none;z-index: 8;" id="uv-overlay"></div>
 		<div width="740" height="1012" style="display: none;z-index: 8;" id="smoking-overlay"></div>
 		<canvas width="370" height="1012" id="half-face" style="z-index:9;"></canvas>
-		<!-- <canvas width="370" height="1012" style="display: none;" id="half-face" style="z-index:9;"></canvas> -->
+		<canvas width="370" height="1012" style="display: none;" id="half-face" style="z-index:9;"></canvas>
 		<div id="divider" style="z-index: 10;">
 			<img src="assets/imgs/divider.png"></img>
 		</div>

@@ -229,6 +229,24 @@ img{
 
 #foreground canvas{
 	position: fixed;
-	left:0px;
-	top:0px;
+	left: 0px;
+	top: 0px;
+	z-index: 2;
+}
+
+.step canvas{
+	position: fixed;
+	top: 204px;
+}
+
+#step1 canvas{
+	left: -12px;
+}
+
+#step2 canvas{
+	left: 353px;
+}
+
+#step3 canvas{
+	left: 714px;
 }

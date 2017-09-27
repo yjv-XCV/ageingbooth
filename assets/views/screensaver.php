@@ -1,6 +1,4 @@
-<div id="foreground" style="z-index: 5;"></div>
-<canvas style="z-index: 5;" width="1080" height="3840" id="buffer"></canvas>
-<canvas width="1080" height="1920" id="output"></canvas>
+<div id="foreground"></div>
 
 
 <div class="photos top">

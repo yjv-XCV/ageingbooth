@@ -1,22 +1,22 @@
 $(function(){
 
-	var app1 = new PIXI.Application(800, 600);
-	var app2 = new PIXI.Application(800, 600);
-	var app3 = new PIXI.Application(800, 600);
+	var app1 = new PIXI.Application(400, 300, {transparent:true});
+	var app2 = new PIXI.Application(400, 300, {transparent:true});
+	var app3 = new PIXI.Application(400, 300, {transparent:true});
 	$('#step1').append(app1.view);
 	$('#step2').append(app2.view);
 	$('#step3').append(app3.view);
 
 	PIXI.loader
-	    .add('assets/sprites/step1_start.json')
-	    .add('assets/sprites/step1_loop.json')
-	    .add('assets/sprites/step1_end.json')
-	    .add('assets/sprites/step2_start.json')
-	    .add('assets/sprites/step2_loop.json')
-	    .add('assets/sprites/step2_end.json')
-	    .add('assets/sprites/step3_start.json')
-	    .add('assets/sprites/step3_loop.json')
-	    .add('assets/sprites/step3_end.json')
+	    .add('assets/animation/step1_start.json')
+	    .add('assets/animation/step1_loop.json')
+	    .add('assets/animation/step1_end.json')
+	    .add('assets/animation/step2_start.json')
+	    .add('assets/animation/step2_loop.json')
+	    .add('assets/animation/step2_end.json')
+	    .add('assets/animation/step3_start.json')
+	    .add('assets/animation/step3_loop.json')
+	    .add('assets/animation/step3_end.json')
 	    .load(onAssetsLoaded);
 
 	function onAssetsLoaded()
@@ -146,7 +146,7 @@ $(function(){
 
 	  	stage = 1;
 
-	  	$(document).on('step1', function(){
+	  	$(document).on('stepA', function(){
 	  		if (stage == 2) {
 	  			step2_start.alpha = 0;
 	  			step2_loop.alpha = 0;
@@ -164,7 +164,7 @@ $(function(){
 	  		}
 	  		stage = 1;
 	  	});
-	  	$(document).on('step2', function(){
+	  	$(document).on('stepB', function(){
 	  		if (stage == 1) {
 	  			step1_start.alpha = 0;
 	  			step1_loop.alpha = 0;
@@ -183,7 +183,7 @@ $(function(){
 	  		stage = 2;
 
 	  	});
-	  	$(document).on('step3', function(){
+	  	$(document).on('stepC', function(){
 			if (stage == 2) {
 	  			step2_start.alpha = 0;
 	  			step2_loop.alpha = 0;

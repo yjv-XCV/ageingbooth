@@ -10,7 +10,7 @@ var upload_image_data = function(filetype, imgdata) {
   if (imgdata != null) {
     $.ajax({
       type: 'POST',
-      url: '/assets/saveOriginal.php',
+      url: './assets/saveOriginal.php',
       data: fd,
       processData: false,
       contentType: false,

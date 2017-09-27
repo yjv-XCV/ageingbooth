@@ -2,13 +2,13 @@
 <script src='vendor/jquery-3.1.1.min.js'></script>
 <script src='vendor/libs/jquery.min.js'></script>
 <script src='vendor/semantic.min.js'></script>
-<script src='vendor/libs/pixi.js'></script>
 <!-- <script src='vendor/libs/model_pca_20_svm.js'></script> -->
 <!-- <script src='assets/js/model_pca_20_svm.js'></script> -->
 <script src='vendor/libs/utils.js'></script>
-<!-- <script src='vendor/libs/dat.gui.min.js'></script> -->
+<script src='vendor/libs/dat.gui.min.js'></script>
 <script src='vendor/libs/clmtrackr.min.js'></script>
 <script src='vendor/libs/Stats.js'></script>
+<script src='vendor/libs/pixi.js'></script>
 <script src='vendor/libs/jquery.imgareaselect.pack.js'></script>
 <script src='vendor/jquery-ui/jquery-ui.min.js'></script>  
 

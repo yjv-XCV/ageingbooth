@@ -2,6 +2,7 @@
 	width: 1080px;
 	height: 1920px;
 	display:none;
+	z-index: 12;
 }
 
 .quitbackground{

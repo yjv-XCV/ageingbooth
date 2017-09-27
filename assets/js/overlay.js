@@ -6,14 +6,7 @@ var ageing = {
 				    'height' : 1012,
 				    'transparent' : true
 				});
-				// document.body.appendChild(app.view);
-				var ageing_cc = $('#overlay')[0];
-				app.renderer = new PIXI.CanvasRenderer({
-					width : 740,
-					height : 1012,
-					view : ageing_cc,
-					transparent : true,
-				});
+				$('#age-overlay').append(app.view);
 
 				var count = 0;
 				var vrtcs = new Float32Array(84);
@@ -135,18 +128,19 @@ var ageing = {
 			    ys = [tcs[46][1],tcs[46][1],tcs[48][1],tcs[48][1],tcs[53][1],tcs[53][1],tcs[53][1],tcs[53][1]];
 			    vrtcsp(indexes, xs, ys);
 
-			    this.ageingOverlay = new PIXI.mesh.Mesh(
-			    	PIXI.Texture.fromImage('assets/imgs/old3.png'),
+			    this.overlay = new PIXI.mesh.Mesh(
+			    	PIXI.Texture.fromImage('assets/imgs/old2.png'),
 			    	vrtcs ,
 			    	uvs,
-			    	new Uint16Array([0,6,1,7,2,8,3,9,4,10,5,11,11,17,11,16,10,15,9,14,8,13,7,12,6,12,12,18,13,19,14,20,15,21,16,22,17,23,23,29,23,28,22,27,21,26,20,25,19,24,18,24,24,30,25,31,26,32,27,33,28,34,29,35,35,41,35,40,34,39,33,38,32,37,31,36,30]));
-			    this.ageingOverlay.alpha = 1.0;
-			    this.ageingOverlay.x = 0;
-			    this.ageingOverlay.y = 0;
-			    app.stage.addChild(this.ageingOverlay);
+			    	new Uint16Array([0,6,1,7,2,8,3,9,4,10,5,11,11,17,11,16,10,15,9,14,8,13,7,12,6,12,12,18,13,19,14,20,15,21,16,22,17,23,23,29,23,28,22,27,21,26,20,25,19,24,18,24,24,30,25,31,26,32,27,33,28,34,29,35,35,41,35,40,34,39,33,38,32,37,31,36,30])
+			    );
+			    
+			    this.overlay.alpha = 0.5;
+			    this.overlay.x = 0;
+			    this.overlay.y = 0;
+			    app.stage.addChild(this.overlay);
 				
 			},
-
 } 
 
 var uv = {
@@ -157,14 +151,7 @@ var uv = {
 				    'height' : 1012,
 				    'transparent' : true
 				});
-				// document.body.appendChild(app.view);
-				var ageing_cc = $('#uv-overlay')[0];
-				app.renderer = new PIXI.CanvasRenderer({
-					width : 740,
-					height : 1012,
-					view : ageing_cc,
-					transparent : true,
-				});
+				$('#uv-overlay').append(app.view);
 
 				var count = 0;
 				var vrtcs = new Float32Array(84);
@@ -285,15 +272,15 @@ var uv = {
 			    ys = [tcs[46][1],tcs[46][1],tcs[48][1],tcs[48][1],tcs[53][1],tcs[53][1],tcs[53][1],tcs[53][1]];
 			    vrtcsp(indexes, xs, ys);
 
-			    this.ageingOverlay = new PIXI.mesh.Mesh(
+			    this.overlay = new PIXI.mesh.Mesh(
 			    	PIXI.Texture.fromImage('assets/imgs/freckles.png'),
 			    	vrtcs ,
 			    	uvs,
 			    	new Uint16Array([0,6,1,7,2,8,3,9,4,10,5,11,11,17,11,16,10,15,9,14,8,13,7,12,6,12,12,18,13,19,14,20,15,21,16,22,17,23,23,29,23,28,22,27,21,26,20,25,19,24,18,24,24,30,25,31,26,32,27,33,28,34,29,35,35,41,35,40,34,39,33,38,32,37,31,36,30]));
-			    this.ageingOverlay.alpha = 1.0;
-			    this.ageingOverlay.x = 0;
-			    this.ageingOverlay.y = 0;
-			    app.stage.addChild(this.ageingOverlay);
+			    this.overlay.alpha = 1.0;
+			    this.overlay.x = 0;
+			    this.overlay.y = 0;
+			    app.stage.addChild(this.overlay);
 				
 			},
 
@@ -307,14 +294,8 @@ var smoking = {
 				    'height' : 1012,
 				    'transparent' : true
 				});
-				// document.body.appendChild(app.view);
-				var ageing_cc = $('#smoking-overlay')[0];
-				app.renderer = new PIXI.CanvasRenderer({
-					width : 740,
-					height : 1012,
-					view : ageing_cc,
-					transparent : true,
-				});
+				$('#smoking-overlay').append(app.view);
+				
 
 				var count = 0;
 				var vrtcs = new Float32Array(84);
@@ -436,15 +417,15 @@ var smoking = {
 			    ys = [tcs[46][1],tcs[46][1],tcs[48][1],tcs[48][1],tcs[53][1],tcs[53][1],tcs[53][1],tcs[53][1]];
 			    vrtcsp(indexes, xs, ys);
 
-			    this.ageingOverlay = new PIXI.mesh.Mesh(
+			    this.overlay = new PIXI.mesh.Mesh(
 			    	PIXI.Texture.fromImage('assets/imgs/lips.png'),
 			    	vrtcs ,
 			    	uvs,
 			    	new Uint16Array([0,6,1,7,2,8,3,9,4,10,5,11,11,17,11,16,10,15,9,14,8,13,7,12,6,12,12,18,13,19,14,20,15,21,16,22,17,23,23,29,23,28,22,27,21,26,20,25,19,24,18,24,24,30,25,31,26,32,27,33,28,34,29,35,35,41,35,40,34,39,33,38,32,37,31,36,30]));
-			    this.ageingOverlay.alpha = 1.0;
-			    this.ageingOverlay.x = 0;
-			    this.ageingOverlay.y = 0;
-			    app.stage.addChild(this.ageingOverlay);
+			    this.overlay.alpha = 1.0;
+			    this.overlay.x = 0;
+			    this.overlay.y = 0;
+			    app.stage.addChild(this.overlay);
 				
 			},
 

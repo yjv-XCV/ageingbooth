@@ -37,9 +37,9 @@ var buttons = function() {
 		slide: function(event, ui){
 			console.log(ui.value * 0.01 * 0.5);
 			//alpha value
-			if(typeof ageing.ageingOverlay != "undefined")ageing.ageingOverlay.alpha = (ui.value * 0.01 * 0.5);
-			if(typeof uv.ageingOverlay != "undefined")uv.ageingOverlay.alpha = (ui.value * 0.01 * 0.5);
-			if(typeof smoking.ageingOverlay != "undefined")smoking.ageingOverlay.alpha = (ui.value * 0.01 * 0.5);
+			if(typeof ageing.overlay != "undefined")ageing.overlay.alpha = (ui.value * 0.01 * 0.5);
+			if(typeof uv.overlay != "undefined")uv.overlay.alpha = (ui.value * 0.01 * 0.5);
+			if(typeof smoking.overlay != "undefined")smoking.overlay.alpha = (ui.value * 0.01 * 0.5);
 		}
 
 	});
@@ -61,7 +61,17 @@ var buttons = function() {
 	});
 
 	$('#confirm').on('click', function(){
-		var box = [81, 115, 550, 588];
+		// image_cc = $('#image')[0].getContext('2d');
+		// var image_img = new Image();
+		// $(image_img).load(function(){
+		// 	image_cc.drawImage(image_img, 0, 0, 740, 1012);
+		// });
+		// image_img.src = 'imgs/original/001.jpeg';
+
+
+
+		// var box = [81, 115, 550, 588];
+		var box = [220, 190, 500 - 228, 500 - 165];
 		detect_face(box);
 		//detect-face, model, mesh
 		//loading
@@ -127,12 +137,10 @@ var init = function(){
 	    face_template_cc.drawImage(face_template, 0, 0, 740, 1012);
 	});
 	face_template.src = 'assets/imgs/face_template.png';
-	console.log(face_template.src);
 
 
 }
 
 $(init);
 $(init_cam);
-$(flippingPhoto);
 $(buttons);

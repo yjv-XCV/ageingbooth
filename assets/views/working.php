@@ -19,9 +19,11 @@
 	<div id="page4">
 		<canvas width="740" height="1012" id="image"></canvas>
 		<canvas width="740" height="1012" style="z-index: 7;" id="overlay"></canvas>
-		<canvas width="740" height="1012" style="display:none;z-index: 8;" id="uv-overlay"></canvas>
-		<canvas width="740" height="1012" style="display:none;z-index: 8;" id="smoking-overlay"></canvas>
-		<canvas width="370" height="1012" id="half-face" style="z-index:9;"></canvas>
+		<div id="age-overlay"></div>
+		<div width="740" height="1012" style="display: none;z-index: 8;" id="uv-overlay"></div>
+		<div width="740" height="1012" style="display: none;z-index: 8;" id="smoking-overlay"></div>
+		<!-- <canvas width="370" height="1012" id="half-face" style="z-index:9;"></canvas> -->
+		<canvas width="370" height="1012" style="display: none;" id="half-face" style="z-index:9;"></canvas>
 		<div id="divider" style="z-index: 10;">
 			<img src="assets/imgs/divider.png"></img>
 		</div>

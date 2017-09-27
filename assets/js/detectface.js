@@ -17,7 +17,7 @@ var drawLoop = function(t){
 var detect_face = function(box){
 
     // DRAW RECT
-    overlay_cc.lineWidth="6";
+    // overlay_cc.lineWidth="6";
     // overlay_cc.rect(box[0], box[1], box[2], box[3]);
     // overlay_cc.stroke();
 
@@ -25,7 +25,7 @@ var detect_face = function(box){
     ctracker.start($('#image')[0], box);
 
     // DRAW LOOP
-    requestAnimFrame(drawLoop);
+    // requestAnimFrame(drawLoop);
   }
 
 $(function(){
@@ -34,9 +34,9 @@ $(function(){
   overlay_cc = $('#overlay')[0].getContext('2d');
   var drawRequest;
 
-  // $('#overlay').click(function(e) {
-  //   zz.cs.getCursorPosition($('#image')[0], e);
-  // });
+  $('#divider').click(function(e) {
+    zz.cs.getCursorPosition($('#image')[0], e);
+  });
  // detect if tracker fails to find a face
   document.addEventListener("clmtrackrNotFound", function(event) {
     console.log(ctracker.getScore() + ' not found.');

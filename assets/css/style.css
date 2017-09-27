@@ -226,3 +226,9 @@ img{
 #slider-handle:focus{
 	outline:none;
 }
+
+#foreground canvas{
+	position: fixed;
+	left:0px;
+	top:0px;
+}

@@ -70,8 +70,8 @@ var buttons = function() {
 
 
 
-		// var box = [81, 115, 550, 588];
-		var box = [220, 190, 500 - 228, 500 - 165];
+		var box = [81, 115, 550, 588];
+		// var box = [220, 190, 500 - 228, 500 - 165];
 		detect_face(box);
 		//detect-face, model, mesh
 		//loading

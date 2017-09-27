@@ -1,9 +1,4 @@
-<video id="screensaver" style="display:none;" autoplay loop>
-    <source src="assets/videos/screensaver.mp4" type='video/mp4; codecs="avc1.42E01E"' />
-</video>
-<video id="alpha" style="display:none;" autoplay loop>
-    <source src="assets/videos/screensaver_alpha.mp4" type='video/mp4; codecs="avc1.42E01E"' />
-</video>
+<div id="foreground" style="z-index: 5;"></div>
 <canvas style="z-index: 5;" width="1080" height="3840" id="buffer"></canvas>
 <canvas width="1080" height="1920" id="output"></canvas>
 

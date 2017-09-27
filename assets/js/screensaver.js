@@ -11,34 +11,44 @@ var flippingPhoto = setInterval(function(){
 						i %= 16;
 					},500);
 
-
 $(function(){
-	var outputCanvas = document.getElementById('output'),
-	output = outputCanvas.getContext('2d'),
-	bufferCanvas = document.getElementById('buffer'),
-	buffer = bufferCanvas.getContext('2d'),
-	video = document.getElementById('screensaver'),
-	alpha = document.getElementById('alpha'),
-	width = outputCanvas.width,
-	height = outputCanvas.height,interval;
-	 
-	function processFrame() {
-	    buffer.drawImage(video, 0, 0);
-	    buffer.drawImage(alpha, 0, height);
-	 
-	        // this can be done without alphaData, except in Firefox which doesn't like it when image is bigger than the canvas
-	    var image = buffer.getImageData(0, 0, width, height),
-	    imageData = image.data,
-	    alphaData = buffer.getImageData(0, height, width, height).data;
-	 
-	    for (var i = 3, len = imageData.length; i < len; i = i + 4) {
-	    imageData[i] = alphaData[i-1];
-	    }
-	 
-	    output.putImageData(image, 0, 0, 0, 0, width, height);
+
+	var app = new PIXI.Application(1080, 1920, {transparent: true});
+	$('#foreground').append(app.view);
+
+	var loader = new PIXI.loaders.Loader();
+
+	for (var i = 0; i < 72; i++) {
+		loader.add('assets/animation/screensaver/foreground' + i + '.json');
+	}
+	    loader.load(onAssetsLoaded);
+
+	function onAssetsLoaded()
+	{
+	    // create an array of textures from an image path
+	    var frames = [];
+
+	    for (var i = 0; i < 72; i++) {
+	        var val = i < 10 ? '0' + i : i;
+
+	        // magically works since the spritesheet was loaded with the pixi loader
+	        frames.push(PIXI.Texture.fromFrame('Screensaver\ foreground\ animation_1_000' + val + '.png'));
 	    }
 
-	setInterval(function(){
-	    processFrame();
-	},1000);
+	    // create an AnimatedSprite (brings back memories from the days of Flash, right ?)
+	    var anim = new PIXI.extras.AnimatedSprite(frames);
+
+	    /*
+	     * An AnimatedSprite inherits all the properties of a PIXI sprite
+	     * so you can change its position, its anchor, mask it, etc
+	     */
+	    anim.x = app.renderer.width / 2;
+	    anim.y = app.renderer.height / 2;
+	    anim.anchor.set(0.5);
+	    anim.animationSpeed = 0.3;
+	    anim.play();
+
+	    app.stage.addChild(anim);
+	}
+
 });

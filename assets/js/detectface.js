@@ -34,27 +34,24 @@ $(function(){
   overlay_cc = $('#overlay')[0].getContext('2d');
   var drawRequest;
 
-  $('#divider').click(function(e) {
-    zz.cs.getCursorPosition($('#image')[0], e);
-  });
  // detect if tracker fails to find a face
   document.addEventListener("clmtrackrNotFound", function(event) {
     console.log(ctracker.getScore() + ' not found.');
     ctracker.stop();
-    ageing.launch();
-    uv.launch();
-    smoking.launch();
-    // remove loading, redirect to page 4
+    // ageing.launch();
+    // uv.launch();
+    // smoking.launch();
+    showpage($('#page4'));
   }, false);
 
   // detect if tracker loses tracking of face
   document.addEventListener("clmtrackrLost", function(event) {
     console.log(ctracker.getScore() + ' lost.');
     ctracker.stop();
-    ageing.launch();
-    uv.launch();
-    smoking.launch();
-    // remove loading, redirect to page 4
+    // ageing.launch();
+    // uv.launch();
+    // smoking.launch();
+    showpage($('#page4'));
   }, false);
 
   // detect if tracker has converged
@@ -66,7 +63,7 @@ $(function(){
     ageing.launch();
     uv.launch();
     smoking.launch();
-    // remove loading, redirect to page 4
+    showpage($('#page4'));
   }, false);
 
 });

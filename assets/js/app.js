@@ -81,7 +81,8 @@ var buttons = function() {
 		var box = [81, 115, 550, 588];
 		detect_face(box);
 		//loading
-		showpage($('#page4'));
+		$('#loading').show();
+		// showpage($('#page4'));
 	});
 
 	$('#done').on('click', function(){
@@ -144,7 +145,6 @@ var init = function(){
 	    face_template_cc.drawImage(face_template, 0, 0, 740, 1012);
 	});
 	face_template.src = 'assets/imgs/face_template.png';
-
 
 }
 

@@ -235,3 +235,10 @@ img{
 #step3 canvas{
 	left: 714px;
 }
+
+#loading{
+	width: 1080px;
+	height: 1920px;
+	background-color: white;
+	opacity: 0.5;
+}

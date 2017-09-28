@@ -4,7 +4,7 @@ var homepage = function(){
 	$('#sec01').animate({
 		'opacity': '1',
 	},100);
-	$('.steps').show()
+	$('#steps').show()
 	homeFlag = 1;
 	$(stopInactivity);
 }
@@ -23,7 +23,7 @@ var showpage = function(page){
 			$(document).trigger('stepC');
 			break;
 		case 5:
-			$('.steps').hide();
+			$('#steps').hide();
 			break;
 	}
 	path = 'assets/imgs/page0' + number + '.png';
@@ -51,8 +51,8 @@ var buttons = function() {
 	$('#slider').slider({
 		value: 100,
 		slide: function(event, ui){
-			console.log(ui.value * 0.01 * 0.5);
-			//alpha value
+			// console.log(ui.value * 0.01 * 0.5);
+			// alpha value
 			if(typeof ageing.overlay != "undefined")ageing.overlay.alpha = (ui.value * 0.01 * 0.5);
 			if(typeof uv.overlay != "undefined")uv.overlay.alpha = (ui.value * 0.01 * 0.5);
 			if(typeof smoking.overlay != "undefined")smoking.overlay.alpha = (ui.value * 0.01 * 0.5);
@@ -96,7 +96,7 @@ var buttons = function() {
 
 	$('#done').on('click', function(){
 		snap = last_snap('jpeg');
-		// image_id = upload_image_data('jpeg', snap);
+		image_id = upload_image_data('jpeg', snap);
 		showpage($('#page5'));
 		$('#slider').slider({value:100});
 		setTimeout(function(){

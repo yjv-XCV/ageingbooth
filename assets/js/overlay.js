@@ -129,7 +129,7 @@ var ageing = {
 			    vrtcsp(indexes, xs, ys);
 
 			    this.overlay = new PIXI.mesh.Mesh(
-			    	PIXI.Texture.fromImage('assets/imgs/old2.png'),
+			    	PIXI.Texture.fromImage('assets/imgs/old3.png'),
 			    	vrtcs ,
 			    	uvs,
 			    	new Uint16Array([0,6,1,7,2,8,3,9,4,10,5,11,11,17,11,16,10,15,9,14,8,13,7,12,6,12,12,18,13,19,14,20,15,21,16,22,17,23,23,29,23,28,22,27,21,26,20,25,19,24,18,24,24,30,25,31,26,32,27,33,28,34,29,35,35,41,35,40,34,39,33,38,32,37,31,36,30])
@@ -277,7 +277,7 @@ var uv = {
 			    	vrtcs ,
 			    	uvs,
 			    	new Uint16Array([0,6,1,7,2,8,3,9,4,10,5,11,11,17,11,16,10,15,9,14,8,13,7,12,6,12,12,18,13,19,14,20,15,21,16,22,17,23,23,29,23,28,22,27,21,26,20,25,19,24,18,24,24,30,25,31,26,32,27,33,28,34,29,35,35,41,35,40,34,39,33,38,32,37,31,36,30]));
-			    this.overlay.alpha = 1.0;
+			    this.overlay.alpha = 0.5;
 			    this.overlay.x = 0;
 			    this.overlay.y = 0;
 			    app.stage.addChild(this.overlay);
@@ -422,7 +422,7 @@ var smoking = {
 			    	vrtcs ,
 			    	uvs,
 			    	new Uint16Array([0,6,1,7,2,8,3,9,4,10,5,11,11,17,11,16,10,15,9,14,8,13,7,12,6,12,12,18,13,19,14,20,15,21,16,22,17,23,23,29,23,28,22,27,21,26,20,25,19,24,18,24,24,30,25,31,26,32,27,33,28,34,29,35,35,41,35,40,34,39,33,38,32,37,31,36,30]));
-			    this.overlay.alpha = 1.0;
+			    this.overlay.alpha = 0.5;
 			    this.overlay.x = 0;
 			    this.overlay.y = 0;
 			    app.stage.addChild(this.overlay);

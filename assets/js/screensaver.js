@@ -1,11 +1,18 @@
 i = 0;
-imgae_ids = [];
+//
+var image_paths = [];
 
 var flippingPhoto = setInterval(function(){
 						number = parseInt(Math.random()*1000);
-						number = number % 11 + 2;
-						number = number < 10 ? '0' + number : number;
-						path = 'imgs/original/0' + number + '.png';
+						if(!image_paths.length){
+							number = number % 11 + 2;
+							number = number < 10 ? '0' + number : number;
+							path = 'imgs/original/0' + number + '.png';
+						}
+						else {
+							number = number % (image_paths.length - 2);// remove the . and ..
+							path = image_paths[number];
+						}
 						$('.shape#id' + ++i).shape('flip back',1000);
 						$('.shape#id' + i).children().children('.active').siblings().children('img').attr('src', path);
 						i %= 16;

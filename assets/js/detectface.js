@@ -25,7 +25,7 @@ var detect_face = function(box){
     ctracker.start($('#image')[0], box);
 
     // DRAW LOOP
-    // requestAnimFrame(drawLoop);
+    requestAnimFrame(drawLoop);
   }
 
 $(function(){
@@ -55,11 +55,10 @@ $(function(){
     console.log(ctracker.getScore());
     tcs = ctracker.getCurrentPosition()
     ctracker.stop();
-  }, function(){
     ageing.launch();
     uv.launch();
     smoking.launch();
-  });
+  }, false);
 
 });
 

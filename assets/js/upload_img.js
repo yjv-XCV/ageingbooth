@@ -22,6 +22,22 @@ var upload_image_data = function(filetype, imgdata) {
         console.log(msg);
       }
     });
+
+    // Update the images path
+    $.ajax({
+          type: 'GET',
+          url: './assets/develop.php',
+          processData: false,
+          contentType: false,
+          success: function (data, msg) {
+            console.log(msg);
+            image_paths = JSON.parse(data);
+          },
+          error: function(xhr, status, msg) {
+            console.log(status);
+            console.log(msg);
+          }
+        }); 
   }
   return image_id;
 }

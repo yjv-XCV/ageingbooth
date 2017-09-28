@@ -4,7 +4,7 @@
 	<div class="step" id="step3"></div>	
 </div>
 <div>
-	<div id="page2">
+	<div id="page2" class="page">
 		<video id="cam-stream"></video>
 		<canvas width="740" height="1012" id="face-temp"></canvas>
 		<div class="fixed flex-center" id="countdown"></div>
@@ -13,7 +13,7 @@
 	</div>
 
 
-	<div id="page3">
+	<div id="page3" class="page">
 		<canvas width="740" height="1012" id="snap-canvas"></canvas>
 		<div class="mybutton2"  id="retake"></div>
 		<div class="mybutton2"  id="confirm"></div>
@@ -21,7 +21,7 @@
 	</div>
 
 
-	<div id="page4">
+	<div id="page4" class="page" style="height: 1920px">
 		<canvas width="740" height="1012" id="image"></canvas>
 		<canvas width="740" height="1012" style="z-index: 7;" id="overlay"></canvas>
 		<div id="age-overlay"></div>
@@ -44,7 +44,7 @@
 		<div class="mybutton3" id="done"></div>
 	</div>
 
-	<div id="page5">
+	<div id="page5" class="page">
 		<canvas id="last" style="top:412px;"></canvas>
 	</div>
 </div>

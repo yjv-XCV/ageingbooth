@@ -26,7 +26,7 @@ var upload_image_data = function(filetype, imgdata) {
     // Update the images path
     $.ajax({
           type: 'GET',
-          url: './assets/develop.php',
+          url: './assets/getImagePath.php',
           processData: false,
           contentType: false,
           success: function (data, msg) {

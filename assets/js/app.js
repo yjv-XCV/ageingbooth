@@ -53,8 +53,8 @@ var buttons = function() {
 		slide: function(event, ui){
 			// console.log(ui.value * 0.01 * 0.5);
 			// alpha value
-			if(typeof ageing.overlay != "undefined")ageing.overlay.alpha = (ui.value * 0.01 * 0.5);
-			if(typeof uv.overlay != "undefined")uv.overlay.alpha = (ui.value * 0.01 * 0.5);
+			if(typeof ageing.overlay != "undefined")ageing.overlay.alpha = (ui.value * 0.01 * 0.3);
+			if(typeof uv.overlay != "undefined")uv.overlay.alpha = (ui.value * 0.01 * 0.7);
 			if(typeof smoking.overlay != "undefined")smoking.overlay.alpha = (ui.value * 0.01 * 0.5);
 		}
 
@@ -77,19 +77,9 @@ var buttons = function() {
 	});
 
 	$('#confirm').on('click', function(){
-		// image_cc = $('#image')[0].getContext('2d');
-		// var image_img = new Image();
-		// $(image_img).load(function(){
-		// 	image_cc.drawImage(image_img, 0, 0, 740, 1012);
-		// });
-		// image_img.src = 'imgs/original/001.jpeg';
-
-
 
 		var box = [81, 115, 550, 588];
-		// var box = [220, 190, 500 - 228, 500 - 165];
 		detect_face(box);
-		//detect-face, model, mesh
 		//loading
 		showpage($('#page4'));
 	});
@@ -128,6 +118,7 @@ var buttons = function() {
   	      // video.pause();
 	      //show page 3 things
 	      //hide page 2 things
+	      backup();
 	      showpage($('#page3'));
 	    }, 0);
 

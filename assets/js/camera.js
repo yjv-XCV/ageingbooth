@@ -88,22 +88,22 @@ var b64toBlob = function(b64Data, contentType, sliceSize) {
   return blob;
 }
 
-var original_half = function(){
+// var original_half = function(){
 
-  var snap_canvas = $('#snap-canvas');
+//   var snap_canvas = $('#snap-canvas');
 
-  var half = $('#half-face'),
-      context = half[0].getContext('2d');
+//   var half = $('#half-face'),
+//       context = half[0].getContext('2d');
 
-  var width =  740;//video.videoWidth,
-      height = 1012;//video.videoHeight;
+//   var width =  740;//video.videoWidth,
+//       height = 1012;//video.videoHeight;
 
-  // Setup a canvas with the same dimensions as the video.
-  half[0].width = width/2;
-  half[0].height = height;
+//   // Setup a canvas with the same dimensions as the video.
+//   half[0].width = width/2;
+//   half[0].height = height;
 
-  // Make a copy of the current frame in the video on the canvas.
-  context.translate(width/2, height/2);
-  context.drawImage(snap_canvas[0], 0, 0, width/2, height, -width/2, -height/2, width/2, height);
+//   // Make a copy of the current frame in the video on the canvas.
+//   context.translate(width/2, height/2);
+//   context.drawImage(snap_canvas[0], 0, 0, width/2, height, -width/2, -height/2, width/2, height);
 
-}
+// }

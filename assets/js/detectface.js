@@ -25,7 +25,7 @@ var detect_face = function(box){
     ctracker.start($('#image')[0], box);
 
     // DRAW LOOP
-    requestAnimFrame(drawLoop);
+    // requestAnimFrame(drawLoop);
   }
 
 $(function(){
@@ -41,12 +41,20 @@ $(function(){
   document.addEventListener("clmtrackrNotFound", function(event) {
     console.log(ctracker.getScore() + ' not found.');
     ctracker.stop();
+    ageing.launch();
+    uv.launch();
+    smoking.launch();
+    // remove loading, redirect to page 4
   }, false);
 
   // detect if tracker loses tracking of face
   document.addEventListener("clmtrackrLost", function(event) {
     console.log(ctracker.getScore() + ' lost.');
     ctracker.stop();
+    ageing.launch();
+    uv.launch();
+    smoking.launch();
+    // remove loading, redirect to page 4
   }, false);
 
   // detect if tracker has converged
@@ -58,6 +66,7 @@ $(function(){
     ageing.launch();
     uv.launch();
     smoking.launch();
+    // remove loading, redirect to page 4
   }, false);
 
 });

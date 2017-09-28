@@ -15,6 +15,7 @@
 
 	<div id="page3" class="page">
 		<canvas width="740" height="1012" id="snap-canvas"></canvas>
+		<canvas width="740" height="1012" id="backup"></canvas>
 		<div class="mybutton2"  id="retake"></div>
 		<div class="mybutton2"  id="confirm"></div>
 		<div class="mybutton3 home"></div>
@@ -27,11 +28,7 @@
 		<div id="age-overlay"></div>
 		<div width="740" height="1012" style="display: none;z-index: 8;" id="uv-overlay"></div>
 		<div width="740" height="1012" style="display: none;z-index: 8;" id="smoking-overlay"></div>
-		<canvas width="370" height="1012" id="half-face" style="z-index:9;"></canvas>
-		<canvas width="370" height="1012" style="display: none;" id="half-face" style="z-index:9;"></canvas>
-		<div id="divider" style="z-index: 10;">
-			<img src="assets/imgs/divider.png"></img>
-		</div>
+		<canvas width="740" height="1012" id="half-face" style="z-index:9;"></canvas>
 		<div id="slider">
 			<div id="slider-handle" class="ui-slider-handle"></div>
 		</div>

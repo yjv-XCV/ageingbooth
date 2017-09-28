@@ -55,7 +55,6 @@ $(function(){
     console.log(ctracker.getScore());
     tcs = ctracker.getCurrentPosition()
     ctracker.stop();
-  }, function(){
     ageing.launch();
     uv.launch();
     smoking.launch();

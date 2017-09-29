@@ -68,19 +68,30 @@ backup = function(){
         var x = event.data.global.x,
         y = event.data.global.y;        
         if(isDraggingA){
-            x = x > 370 ? 370 : x;
+            x = x > 340 ? 340 : x;
             y = y > 506 ? 506 : y;
             left_eye.clear();
             left_eye.beginFill(0xff0000, 0.4);
             left_eye.drawCircle(x, y, 30);
             position.leftEye = [x, y];
+
+            right_eye.clear();
+            right_eye.beginFill(0xff0000, 0.4);
+            right_eye.drawCircle(740 - x, y, 30);
+            position.rightEye = [740 - x, y];
+
         } else if(isDraggingB){
-            x = x < 370 ? 370 : x;
+            x = x < 400 ? 400 : x;
             y = y > 506 ? 506 : y;
             right_eye.clear();
             right_eye.beginFill(0xff0000, 0.4);
             right_eye.drawCircle(x, y, 30);
             position.rightEye = [x, y];
+
+            left_eye.clear();
+            left_eye.beginFill(0xff0000, 0.4);
+            left_eye.drawCircle(740 - x, y, 30);
+            position.leftEye = [740 - x, y];
         } else if(isDraggingC){
             x = x > 520 ? 520 : x < 220 ? 220 : x;
             y = y < 506 ? 506 : y;

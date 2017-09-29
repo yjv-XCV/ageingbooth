@@ -146,6 +146,21 @@ var init = function(){
 	});
 	face_template.src = 'assets/imgs/face_template.png';
 
+	$.ajax({
+          type: 'GET',
+          url: './assets/getImagePath.php',
+          processData: false,
+          contentType: false,
+          success: function (data, msg) {
+            console.log(msg);
+            image_paths = JSON.parse(data);
+          },
+          error: function(xhr, status, msg) {
+            console.log(status);
+            console.log(msg);
+          }
+        }); 
+
 }
 
 $(init);

@@ -109,6 +109,7 @@ backup = function(){
         // tcs calculation
         var dummy_x = 0, dummy_y = 0;
         tcs = [];
+        // forehead
         tcs[0]  = [position.leftEye[0] - 0.55 * (position.rightEye[0] - position.leftEye[0]), position.leftEye[1]];
         tcs[14] = [position.rightEye[0] + 0.55 * (position.rightEye[0] - position.leftEye[0]), position.rightEye[1]];
         tcs[1]  = [tcs[0][0], tcs[0][1] + 0.4 * (position.mouth[1] - position.leftEye[1])];
@@ -119,54 +120,36 @@ backup = function(){
         tcs[21] = [position.leftEye[0] + 0.075 * (position.rightEye[0] - position.leftEye[0]), tcs[1][1] - tcs[0][1]];
         tcs[19] = [dummy_x, position.leftEye[1] - 0.5 * (position.leftEye[1] - tcs[21][1])];
         tcs[22] = [position.leftEye[0] + 0.25 * (position.rightEye[0] - position.leftEye[0]), tcs[19][1]];
+        
+        // left eye
         tcs[23] = [position.leftEye[0] - 0.4 * (position.leftEye[0] - tcs[0][0]), position.leftEye[1]];
         tcs[24] = [position.leftEye[0], position.leftEye[1] - 0.2 * (position.leftEye[1] - tcs[21][1])];
         tcs[25] = [position.leftEye[0] + 0.4 * (position.leftEye[0] - tcs[0][0]), position.leftEye[1]];
         tcs[26] = [position.leftEye[0], position.leftEye[1] + 0.2 * (position.leftEye[1] - tcs[21][1])];
+        
+        // right eye
         tcs[28] = [position.rightEye[0] + 0.4 * (position.rightEye[0] - tcs[14][0]), position.rightEye[1]];
         tcs[29] = [position.rightEye[0], position.rightEye[1] - 0.2 * (position.rightEye[1] - tcs[17][1])];
         tcs[30] = [position.rightEye[0] - 0.4 * (position.rightEye[0] - tcs[14][0]) , position.rightEye[1]];
         tcs[31] = [position.rightEye[0], position.rightEye[1] + 0.2 * (position.rightEye[1] - tcs[17][1])];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
-        tcs[] = [dummy_x, dummy_y];
+        
+        // jaws
+        tcs[2] = [tcs[0][0], 0.8 * (tcs[1][1] - tcs[0][1])];              tcs[12] = [tcs[14][0], tcs[2][1]];
+        tcs[3] = [(tcs[19][0] - tcs[0][0]) / 2, tcs[1][1] - tcs[0][1]];   tcs[11] = [(tcs[14][0] - tcs[15][0]) / 2, tcs[3][1]];
+        tcs[4] = [tcs[23][0], 0.7 * (tcs[1][1] - tcs[0][1])];             tcs[10] = [tcs[28][0], tcs[4][1]];
+        tcs[5] = [tcs[26][0], 0.5 * (tcs[1][1] - tcs[0][1])];             tcs[9]  = [tcs[31][0], tcs[5][1]];
+        tcs[6] = [tcs[25][0], 0.2 * (tcs[1][1] - tcs[0][1])];             tcs[8]  = [tcs[30][0], tcs[6][1]];
+        tcs[7] = [(position.rightEye[0] + position.leftEye[0]) / 2, position.mouth[1] + (position.mouth[1] - (position.rightEye[1] + position.leftEye[1]) / 2) / 2];
+        
+        
+        // nose
+        tcs[35] = [tcs[6][0], (tcs[1][1] + tcs[2][1]) / 2]; tcs[39] = [tcs[8][0],  (tcs[13][1] + tcs[12][1]) / 2]; 
+        
+        // mouth
+        tcs[44] = [dummy_x, dummy_y]; tcs[50] = [dummy_x, tcs[44][1]];
+        tcs[46] = [dummy_x, dummy_y]; tcs[48] = [dummy_x, tcs[46][1]];
+        tcs[53] = [dummy_x, tcs[7][1]];
+
         ];
         console.log(position);
         console.log(tcs);

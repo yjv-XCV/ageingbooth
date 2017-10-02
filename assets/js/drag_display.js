@@ -1,4 +1,4 @@
-original_half = function(){
+var original_half = function(){
 	var img = $('#snap-canvas')[0];
 
 	var app = new PIXI.Application(740, 1012, { view: $('#half-face')[0], antialias: true, forceCanvas: true, transparent: true });

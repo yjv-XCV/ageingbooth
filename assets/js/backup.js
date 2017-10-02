@@ -107,7 +107,6 @@ backup = function(){
 
     $('#confirm').on('click', function(){
         // tcs calculation
-        var dummy_x = 0, dummy_y = 0;
         tcs = [];
         // forehead
         tcs[0]  = [position.leftEye[0] - 0.55 * (position.rightEye[0] - position.leftEye[0]), position.leftEye[1]];
@@ -135,10 +134,10 @@ backup = function(){
         
         // jaws
         tcs[2] = [tcs[0][0], 0.8 * (tcs[1][1] - tcs[0][1])];              tcs[12] = [tcs[14][0], tcs[2][1]];
-        tcs[3] = [(tcs[19][0] - tcs[0][0]) / 2, tcs[1][1] - tcs[0][1]];   tcs[11] = [(tcs[14][0] - tcs[15][0]) / 2, tcs[3][1]];
+        tcs[3] = [(tcs[19][0] + tcs[0][0]) / 2, tcs[1][1] - tcs[0][1]];   tcs[11] = [(tcs[14][0] + tcs[15][0]) / 2, tcs[3][1]];
         tcs[4] = [tcs[23][0], 0.7 * (tcs[1][1] - tcs[0][1])];             tcs[10] = [tcs[28][0], tcs[4][1]];
         tcs[5] = [tcs[26][0], 0.5 * (tcs[1][1] - tcs[0][1])];             tcs[9]  = [tcs[31][0], tcs[5][1]];
-        tcs[6] = [tcs[25][0], 0.2 * (tcs[1][1] - tcs[0][1])];             tcs[8]  = [tcs[30][0], tcs[6][1]];
+        tcs[6] = [tcs[25][0], 0.2 * (tcs[1][1] - tcs[0][1])];             ntcs[8]  = [tcs[30][0], tcs[6][1]];
         tcs[7] = [(position.rightEye[0] + position.leftEye[0]) / 2, position.mouth[1] + (position.mouth[1] - (position.rightEye[1] + position.leftEye[1]) / 2) / 2];
         
         
@@ -146,9 +145,9 @@ backup = function(){
         tcs[35] = [tcs[6][0], (tcs[1][1] + tcs[2][1]) / 2]; tcs[39] = [tcs[8][0],  (tcs[13][1] + tcs[12][1]) / 2]; 
         
         // mouth
-        tcs[44] = [dummy_x, dummy_y]; tcs[50] = [dummy_x, tcs[44][1]];
-        tcs[46] = [dummy_x, dummy_y]; tcs[48] = [dummy_x, tcs[46][1]];
-        tcs[53] = [dummy_x, tcs[7][1]];
+        tcs[53] = [tcs[7][0],  position.mouth[1] + (position.mouth[1] - position.rightEye[1]) / 7];
+        tcs[44] = [(tcs[6][0] + tcs[5][0]) / 2, tcs[3][1]]; tcs[50] = [(tcs[9][0] + tcs[8][0]) / 2, tcs[11][1]];
+        tcs[46] = [tcs[7][0] - 0.4 * (tcs[7][0] - tcs[6][0]), ((tcs[3][1] - 0.4 * (tcs[3][1] - tcs[2][1])) + (tcs[11][1] - 0.4 * (tcs[11][1] - tcs[12][1]))) / 2]; tcs[48] = [tcs[7][0] + 0.4 * (tcs[8][0] - tcs[7][0]), tcs[46][1]];
 
         ];
         console.log(position);

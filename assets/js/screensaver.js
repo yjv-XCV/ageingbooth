@@ -10,7 +10,7 @@ var flippingPhoto = setInterval(function(){
 							path = 'imgs/original/0' + number + '.png';
 						}
 						else {
-							number = number % (image_paths.length - 3);// remove the . and ..
+							number = number % (image_paths.length - 4);// remove the . and ..
 							path = image_paths[number];
 						}
 						$('.shape#id' + ++i).shape('flip back',1000);

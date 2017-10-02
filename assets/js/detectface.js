@@ -38,9 +38,9 @@ $(function(){
   document.addEventListener("clmtrackrNotFound", function(event) {
     console.log(ctracker.getScore() + ' not found.');
     ctracker.stop();
-    // ageing.launch();
-    // uv.launch();
-    // smoking.launch();
+    ageing.launch();
+    uv.launch();
+    smoking.launch();
     showpage($('#page4'));
   }, false);
 
@@ -48,17 +48,17 @@ $(function(){
   document.addEventListener("clmtrackrLost", function(event) {
     console.log(ctracker.getScore() + ' lost.');
     ctracker.stop();
-    // ageing.launch();
-    // uv.launch();
-    // smoking.launch();
+    ageing.launch();
+    uv.launch();
+    smoking.launch();
     showpage($('#page4'));
   }, false);
 
   // detect if tracker has converged
   document.addEventListener("clmtrackrConverged", function(event) {
     // alert('Converged!');
-    console.log(ctracker.getScore());
-    tcs = ctracker.getCurrentPosition()
+    console.log(ctracker.getScore() + ' success.');
+    tcs = ctracker.getCurrentPosition();
     ctracker.stop();
     ageing.launch();
     uv.launch();

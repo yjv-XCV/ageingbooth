@@ -153,7 +153,7 @@ var init = function(){
           processData: false,
           contentType: false,
           success: function (data, msg) {
-            console.log(msg);
+            // console.log(msg);
             image_paths = JSON.parse(data);
           },
           error: function(xhr, status, msg) {

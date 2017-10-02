@@ -107,6 +107,7 @@ backup = function(){
 
     $('#confirm').on('click', function(){
         // tcs calculation
+        tcs = 
         console.log(position);
     });
 };

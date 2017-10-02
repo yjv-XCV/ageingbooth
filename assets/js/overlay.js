@@ -87,9 +87,9 @@ var ageing = {
 
 				
 			    function vrtcsp(index, x, y){
-			        for(var i in index){
-			            vrtcs[index[i]*2] = x[i];
-			            vrtcs[index[i]*2+1] = y[i];
+			        for(var i in index) {
+			            vrtcs[index[i] * 2] = x[i];
+			            vrtcs[index[i] * 2 + 1] = y[i];
 			        }
 			    }
 

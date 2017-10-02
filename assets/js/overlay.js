@@ -6,7 +6,7 @@ var ageing = {
 				    'height' : 1012,
 				    'transparent' : true
 				});
-				$('#age-overlay').append(app.view);
+				$('#age-overlay').html(app.view);
 
 				var count = 0;
 				var vrtcs = new Float32Array(84);
@@ -151,7 +151,7 @@ var uv = {
 				    'height' : 1012,
 				    'transparent' : true
 				});
-				$('#uv-overlay').append(app.view);
+				$('#uv-overlay').html(app.view);
 
 				var count = 0;
 				var vrtcs = new Float32Array(84);
@@ -294,7 +294,7 @@ var smoking = {
 				    'height' : 1012,
 				    'transparent' : true
 				});
-				$('#smoking-overlay').append(app.view);
+				$('#smoking-overlay').html(app.view);
 				
 
 				var count = 0;

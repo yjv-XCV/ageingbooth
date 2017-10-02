@@ -4,7 +4,6 @@ var homepage = function(){
 	$('#sec01').animate({
 		'opacity': '1',
 	},100);
-	$('#steps').show()
 	homeFlag = 1;
 	$(stopInactivity);
 }
@@ -14,6 +13,7 @@ var showpage = function(page){
 	switch (number){
 		case 2:
 			$('#snap').show();
+			$('#steps').show();
 			$(document).trigger('stepA');
 			break;
 		case 3:
@@ -24,12 +24,13 @@ var showpage = function(page){
 			break;
 		case 5:
 			$('#steps').hide();
+			$(document).trigger('stepA');
 			break;
 	}
 	path = 'assets/imgs/page0' + number + '.png';
 	$('img.background').attr('src', path);
-	page.show();
-	page.siblings().hide(100);
+	page.fadeIn(300);
+	page.siblings().fadeOut(300);
 
 }
 
@@ -81,7 +82,7 @@ var buttons = function() {
 		var box = [81, 115, 550, 588];
 		detect_face(box);
 		//loading
-		$('#loading').show();
+		$('#loading').fadeIn(300);
 		// showpage($('#page4'));
 	});
 

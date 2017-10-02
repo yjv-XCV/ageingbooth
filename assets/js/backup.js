@@ -108,16 +108,20 @@ backup = function(){
     $('#confirm').on('click', function(){
         // tcs calculation
         tcs = [];
+        for (var i = 0; i < 71; i++) {
+            tcs.push(Array(2));
+        }
+
         // forehead
         tcs[0]  = [position.leftEye[0] - 0.55 * (position.rightEye[0] - position.leftEye[0]), position.leftEye[1]];
         tcs[14] = [position.rightEye[0] + 0.55 * (position.rightEye[0] - position.leftEye[0]), position.rightEye[1]];
         tcs[1]  = [tcs[0][0], tcs[0][1] + 0.4 * (position.mouth[1] - position.leftEye[1])];
         tcs[13] = [tcs[14][0], tcs[14][1] + 0.4 * (position.mouth[1] - position.rightEye[1])];
         tcs[17] = [position.rightEye[0] - 0.075 * (position.rightEye[0] - position.leftEye[0]), tcs[13][1] - tcs[14][1]];
-        tcs[15] = [dummy_x, position.rightEye[1] - 0.5 * (position.rightEye[1] - tcs[17][1])];
+        tcs[15] = [tcs[14][0] - 0.3 * (tcs[14][0] - position.rightEye[0]), position.rightEye[1] - 0.5 * (position.rightEye[1] - tcs[17][1])];
         tcs[18] = [position.rightEye[0] - 0.25 * (position.rightEye[0] - position.leftEye[0]), tcs[15][1]];
         tcs[21] = [position.leftEye[0] + 0.075 * (position.rightEye[0] - position.leftEye[0]), tcs[1][1] - tcs[0][1]];
-        tcs[19] = [dummy_x, position.leftEye[1] - 0.5 * (position.leftEye[1] - tcs[21][1])];
+        tcs[19] = [tcs[0][0] + 0.3 * (position.leftEye[0] - tcs[0][0]), position.leftEye[1] - 0.5 * (position.leftEye[1] - tcs[21][1])];
         tcs[22] = [position.leftEye[0] + 0.25 * (position.rightEye[0] - position.leftEye[0]), tcs[19][1]];
         
         // left eye
@@ -127,17 +131,17 @@ backup = function(){
         tcs[26] = [position.leftEye[0], position.leftEye[1] + 0.2 * (position.leftEye[1] - tcs[21][1])];
         
         // right eye
-        tcs[28] = [position.rightEye[0] + 0.4 * (position.rightEye[0] - tcs[14][0]), position.rightEye[1]];
+        tcs[28] = [position.rightEye[0] - 0.4 * (position.rightEye[0] - tcs[14][0]), position.rightEye[1]];
         tcs[29] = [position.rightEye[0], position.rightEye[1] - 0.2 * (position.rightEye[1] - tcs[17][1])];
-        tcs[30] = [position.rightEye[0] - 0.4 * (position.rightEye[0] - tcs[14][0]) , position.rightEye[1]];
+        tcs[30] = [position.rightEye[0] + 0.4 * (position.rightEye[0] - tcs[14][0]) , position.rightEye[1]];
         tcs[31] = [position.rightEye[0], position.rightEye[1] + 0.2 * (position.rightEye[1] - tcs[17][1])];
         
         // jaws
-        tcs[2] = [tcs[0][0], 0.8 * (tcs[1][1] - tcs[0][1])];              tcs[12] = [tcs[14][0], tcs[2][1]];
-        tcs[3] = [(tcs[19][0] + tcs[0][0]) / 2, tcs[1][1] - tcs[0][1]];   tcs[11] = [(tcs[14][0] + tcs[15][0]) / 2, tcs[3][1]];
-        tcs[4] = [tcs[23][0], 0.7 * (tcs[1][1] - tcs[0][1])];             tcs[10] = [tcs[28][0], tcs[4][1]];
-        tcs[5] = [tcs[26][0], 0.5 * (tcs[1][1] - tcs[0][1])];             tcs[9]  = [tcs[31][0], tcs[5][1]];
-        tcs[6] = [tcs[25][0], 0.2 * (tcs[1][1] - tcs[0][1])];             ntcs[8]  = [tcs[30][0], tcs[6][1]];
+        tcs[2] = [tcs[0][0], tcs[1][1] + 0.8 * (tcs[1][1] - tcs[0][1])];  tcs[12] = [tcs[14][0], tcs[2][1]];
+        tcs[3] = [(tcs[19][0] + tcs[0][0]) / 2, tcs[2][1] + tcs[1][1] - tcs[0][1]];   tcs[11] = [(tcs[14][0] + tcs[15][0]) / 2, tcs[3][1]];
+        tcs[4] = [tcs[23][0], tcs[3][1] + 0.7 * (tcs[1][1] - tcs[0][1])];             tcs[10] = [tcs[28][0], tcs[4][1]];
+        tcs[5] = [tcs[26][0], tcs[4][1] + 0.5 * (tcs[1][1] - tcs[0][1])];             tcs[9]  = [tcs[31][0], tcs[5][1]];
+        tcs[6] = [tcs[25][0], tcs[5][1] + 0.2 * (tcs[1][1] - tcs[0][1])];             tcs[8]  = [tcs[30][0], tcs[6][1]];
         tcs[7] = [(position.rightEye[0] + position.leftEye[0]) / 2, position.mouth[1] + (position.mouth[1] - (position.rightEye[1] + position.leftEye[1]) / 2) / 2];
         
         
@@ -149,7 +153,6 @@ backup = function(){
         tcs[44] = [(tcs[6][0] + tcs[5][0]) / 2, tcs[3][1]]; tcs[50] = [(tcs[9][0] + tcs[8][0]) / 2, tcs[11][1]];
         tcs[46] = [tcs[7][0] - 0.4 * (tcs[7][0] - tcs[6][0]), ((tcs[3][1] - 0.4 * (tcs[3][1] - tcs[2][1])) + (tcs[11][1] - 0.4 * (tcs[11][1] - tcs[12][1]))) / 2]; tcs[48] = [tcs[7][0] + 0.4 * (tcs[8][0] - tcs[7][0]), tcs[46][1]];
 
-        ];
         console.log(position);
         console.log(tcs);
     });

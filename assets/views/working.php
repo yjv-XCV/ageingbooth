@@ -41,6 +41,8 @@
 		</div>
 		<div class="toggle" id="uv">
 		</div>
+		<div class="label" id="now"></div>
+		<div class="label" id="after"></div>
 		<div class="mybutton3 home"></div>
 		<div class="mybutton3" id="retry"></div>
 		<div class="mybutton3" id="done"></div>

@@ -249,3 +249,25 @@ img{
 	background-color: white;
 	opacity: 0.5;
 }
+
+.label{
+	position: fixed;	
+	top:470px;
+	z-index: 6;
+}
+
+#now{
+	left:170px;
+	background-image: url('./../imgs/page04-text-now.png');
+	background-size: 107px 56px;
+	width: 107px;
+	height: 56px;
+}
+
+#after{
+	left:777px;
+	background-image: url('./../imgs/page04-text-after.png');
+	background-size: 132px 55px;
+	width: 132px;
+	height: 55px;
+}

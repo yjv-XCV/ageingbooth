@@ -27,10 +27,16 @@ var showpage = function(page){
 			$(document).trigger('stepA');
 			break;
 	}
-	path = 'assets/imgs/page0' + number + '.png';
-	$('img.background').attr('src', path);
-	page.fadeIn(300);
-	page.siblings().fadeOut(300);
+	// path = 'assets/imgs/page0' + number + '.png';
+	// $('img.background').attr('src', path);
+	var config = {
+		duration: 400,
+		queue: false
+	}
+	$('img.background.p' + number).fadeIn(config);
+	$('img.background.p' + number).siblings().fadeOut(config);
+	page.siblings().fadeOut(config);
+	page.fadeIn(config);
 
 }
 

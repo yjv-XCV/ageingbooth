@@ -53,6 +53,11 @@
 		<div id="countdown-number">5</div>
 	</div>
 </div>
-<img class="background" src="assets/imgs/page02.png"></img>
+<div>
+	<img class="background p2" src="assets/imgs/page02.png"></img>
+	<img class="background p3" src="assets/imgs/page03.png"></img>
+	<img class="background p4" src="assets/imgs/page04.png"></img>
+	<img class="background p5" src="assets/imgs/page05.png"></img>
+</div>
 
 

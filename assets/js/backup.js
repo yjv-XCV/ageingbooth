@@ -36,6 +36,10 @@ backup = function(){
     mouth.x = position.mouth[0] - mouth_width / 2;
 	mouth.y = position.mouth[1] - mouth_height / 2;
 
+    left_eye.off('mousedown mouseup mousemove');
+    right_eye.off('mousedown mouseup mousemove');
+    mouth.off('mousedown mouseup mousemove');
+
     var isDraggingA = 0, isDraggingB = 0, isDraggingC = 0;
     left_eye.on('mousedown', function(){
         isDraggingA = 1;
@@ -80,7 +84,7 @@ backup = function(){
             right_eye.x = (740 - x) - eye_width / 2;
             right_eye.y = y - eye_height / 2;
             position.rightEye = [740 - x, y];
-            console.log(position.leftEye);
+            // console.log(position.leftEye);
         } else if(isDraggingB){
             x = x < 400 ? 400 : x;
             y = y > 506 ? 506 : y;
@@ -91,14 +95,14 @@ backup = function(){
             right_eye.x = x - eye_width / 2;
             right_eye.y = y - eye_height / 2;
             position.rightEye = [x, y];
-            console.log(position.rightEye);
+            // console.log(position.rightEye);
         } else if(isDraggingC){
             x = x > 520 ? 520 : x < 220 ? 220 : x;
             y = y < 506 ? 506 : y;
             mouth.x = x - mouth_width / 2;
             mouth.y = y - mouth_height / 2;
             position.mouth = [x, y];
-            console.log(position.mouth);
+            // console.log(position.mouth);
         }
     });
 

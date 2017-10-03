@@ -87,13 +87,16 @@ var buttons = function() {
 	});
 
 	$('#done').on('click', function(){
-		snap = last_snap('jpeg');
-		image_id = upload_image_data('jpeg', snap);
+		last.render();
+		setTimeout(function(){
+			snap = last.snap('jpeg');
+		}, 3000);
 		showpage($('#page5'));
 		$('#slider').slider({value:100});
 		setTimeout(function(){
 			$(homepage);
-		},5000);
+			image_id = upload_image_data('jpeg', snap);
+		}, 5000);
 	});
 
 	$('#retry').on('click', function(){

@@ -1,7 +1,7 @@
-var last_snap = function(filetype, quality) {
-	var overlay = $('#age-overlay canvas')[0],
-		  image = $('#image')[0],
-		  last = $('#last')[0];
+var last_render = function() {
+  var overlay = $('#age-overlay canvas')[0],
+      image = $('#image')[0],
+      last = $('#last')[0];
 
   var app = new PIXI.Application(740, 1012, { view: last, forceCanvas: true, transparent: true });
 
@@ -13,9 +13,27 @@ var last_snap = function(filetype, quality) {
   app.stage.addChild(faceFromCanvas);
   app.stage.addChild(overlayFromCanvas);
   app.renderer.render(app.stage);
-  setTimeout(function(){
-    imageData = app.view.toDataURL('image/' + filetype, quality);
-  }, 1000);
+  
+}
 
-  return imageData;
+var last = {
+  render : function(){
+    var overlay = $('#age-overlay canvas')[0],
+        image = $('#image')[0],
+        last = $('#last')[0];
+
+    this.app = new PIXI.Application(740, 1012, { view: last, forceCanvas: true, transparent: true });
+
+    if(typeof ageing.overlay != "undefined")ageing.overlay.alpha = 0.3;
+
+    faceFromCanvas = new PIXI.Sprite(PIXI.Texture.fromCanvas(image));
+    overlayFromCanvas = new PIXI.Sprite(PIXI.Texture.fromCanvas(overlay));
+
+    this.app.stage.addChild(faceFromCanvas);
+    this.app.stage.addChild(overlayFromCanvas);
+    this.app.renderer.render(this.app.stage);
+  },
+  snap : function(fileType, quality){
+    return this.app.view.toDataURL('image/' + fileType, quality);
+  }
 }

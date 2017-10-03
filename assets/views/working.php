@@ -50,6 +50,7 @@
 
 	<div id="page5" class="page">
 		<canvas id="last" style="top:412px;"></canvas>
+		<div id="countdown-number">5</div>
 	</div>
 </div>
 <img class="background" src="assets/imgs/page02.png"></img>

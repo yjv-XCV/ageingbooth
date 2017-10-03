@@ -93,6 +93,11 @@ var buttons = function() {
 		}, 3000);
 		showpage($('#page5'));
 		$('#slider').slider({value:100});
+		$('#countdown-number').html('5');
+		setTimeout(function(){$('#countdown-number').html('4')}, 1000);
+		setTimeout(function(){$('#countdown-number').html('3')}, 2000);
+		setTimeout(function(){$('#countdown-number').html('2')}, 3000);
+		setTimeout(function(){$('#countdown-number').html('1')}, 4000);
 		setTimeout(function(){
 			$(homepage);
 			image_id = upload_image_data('jpeg', snap);

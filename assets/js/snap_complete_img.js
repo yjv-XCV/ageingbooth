@@ -3,7 +3,7 @@ var last_snap = function(filetype, quality) {
 		  image = $('#image')[0],
 		  last = $('#last')[0];
 
-  var app = new PIXI.Application(740, 1012, { view: last, antialias: true, forceCanvas: true, transparent: true });
+  var app = new PIXI.Application(740, 1012, { view: last, forceCanvas: true, transparent: true });
 
   if(typeof ageing.overlay != "undefined")ageing.overlay.alpha = 0.3;
 
@@ -12,8 +12,10 @@ var last_snap = function(filetype, quality) {
 
   app.stage.addChild(faceFromCanvas);
   app.stage.addChild(overlayFromCanvas);
-
   app.renderer.render(app.stage);
+  setTimeout(function(){
+    imageData = app.view.toDataURL('image/' + filetype, quality);
+  }, 1000);
 
-  return app.view.toDataURL('image/' + filetype, quality);
+  return imageData;
 }

@@ -2,9 +2,15 @@ backup = function(){
 	var app = new PIXI.Application(740, 1012, { view: $('#backup')[0], antialias: true, forceCanvas: true, transparent: true });
 	app.stage.interactive = true;
 
-	left_eye = new PIXI.Graphics();
-	right_eye = new PIXI.Graphics();
-	mouth = new PIXI.Graphics();
+    eye = PIXI.Texture.fromImage('assets/imgs/page03-eye-overlay.png')
+	left_eye = new PIXI.Sprite(eye);
+	right_eye = new PIXI.Sprite(eye);
+    eye_width = 83;
+    eye_height = 83;
+
+	mouth = new PIXI.Sprite(PIXI.Texture.fromImage('assets/imgs/page03-mouth-overlay.png'));
+    mouth_width = 216;
+    mouth_height = 86;
 
     left_eye.interactive = true;
     right_eye.interactive = true;
@@ -21,17 +27,14 @@ backup = function(){
         mouth: [370, 655]
     };
 
-	left_eye.beginFill(0xff0000, 0.4);
-    left_eye.drawCircle(240, 335, 30);
+    left_eye.x = position.leftEye[0] - eye_width / 2;
+    left_eye.y = position.leftEye[1] - eye_height / 2;
 
-	right_eye.beginFill(0xff0000, 0.4);
-    right_eye.drawCircle(500, 335, 30);
+    right_eye.x = position.rightEye[0] - eye_width / 2;
+    right_eye.y = position.rightEye[1] - eye_height / 2;
 
-	mouth.beginFill(0xff0000, 0.4);
-    mouth.moveTo(280, 630);
-    mouth.lineTo(280, 680);
-    mouth.lineTo(460, 680);
-    mouth.lineTo(460, 630);
+    mouth.x = position.mouth[0] - mouth_width / 2;
+	mouth.y = position.mouth[1] - mouth_height / 2;
 
     var isDraggingA = 0, isDraggingB = 0, isDraggingC = 0;
     left_eye.on('mousedown', function(){
@@ -70,38 +73,32 @@ backup = function(){
         if(isDraggingA){
             x = x > 340 ? 340 : x;
             y = y > 506 ? 506 : y;
-            left_eye.clear();
-            left_eye.beginFill(0xff0000, 0.4);
-            left_eye.drawCircle(x, y, 30);
+            left_eye.x = x - eye_width / 2;
+            left_eye.y = y - eye_height / 2;
             position.leftEye = [x, y];
 
-            right_eye.clear();
-            right_eye.beginFill(0xff0000, 0.4);
-            right_eye.drawCircle(740 - x, y, 30);
+            right_eye.x = (740 - x) - eye_width / 2;
+            right_eye.y = y - eye_height / 2;
             position.rightEye = [740 - x, y];
-
+            console.log(position.leftEye);
         } else if(isDraggingB){
             x = x < 400 ? 400 : x;
             y = y > 506 ? 506 : y;
-            right_eye.clear();
-            right_eye.beginFill(0xff0000, 0.4);
-            right_eye.drawCircle(x, y, 30);
-            position.rightEye = [x, y];
-
-            left_eye.clear();
-            left_eye.beginFill(0xff0000, 0.4);
-            left_eye.drawCircle(740 - x, y, 30);
+            left_eye.x = (740 - x) - eye_width / 2;
+            left_eye.y = y - eye_height / 2;
             position.leftEye = [740 - x, y];
+
+            right_eye.x = x - eye_width / 2;
+            right_eye.y = y - eye_height / 2;
+            position.rightEye = [x, y];
+            console.log(position.rightEye);
         } else if(isDraggingC){
             x = x > 520 ? 520 : x < 220 ? 220 : x;
             y = y < 506 ? 506 : y;
-            mouth.clear();
-            mouth.beginFill(0xff0000, 0.4);
-            mouth.moveTo(x - 90, y - 25);
-            mouth.lineTo(x - 90, y + 25);
-            mouth.lineTo(x + 90, y + 25);
-            mouth.lineTo(x + 90, y - 25);
+            mouth.x = x - mouth_width / 2;
+            mouth.y = y - mouth_height / 2;
             position.mouth = [x, y];
+            console.log(position.mouth);
         }
     });
 
@@ -153,7 +150,6 @@ backup = function(){
         tcs[44] = [(tcs[6][0] + tcs[5][0]) / 2, tcs[3][1]]; tcs[50] = [(tcs[9][0] + tcs[8][0]) / 2, tcs[11][1]];
         tcs[46] = [tcs[7][0] - 0.4 * (tcs[7][0] - tcs[6][0]), ((tcs[3][1] - 0.4 * (tcs[3][1] - tcs[2][1])) + (tcs[11][1] - 0.4 * (tcs[11][1] - tcs[12][1]))) / 2]; tcs[48] = [tcs[7][0] + 0.4 * (tcs[8][0] - tcs[7][0]), tcs[46][1]];
 
-        console.log(position);
         console.log(tcs);
     });
 };

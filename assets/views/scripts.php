@@ -20,7 +20,6 @@
 <script src='assets/js/upload_img.js'></script>
 <script src='assets/js/camera.js'></script>
 <script src='assets/js/helper.js'></script>
-<script src='assets/js/pages.js'></script>
 <script src='assets/js/overlay.js'></script>
 <script src='assets/js/snap_complete_img.js'></script>
 <script src='assets/js/drag_display.js'></script>

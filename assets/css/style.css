@@ -138,16 +138,23 @@ img{
 
 .toggle{
 	position:fixed;
-	height:55px;
-	width:55px;
-	top:1649px;
+	height:49px;
+	width:49px;
+	top:1637px;
+	background-image: url('./../imgs/page04-radio-unchecked.png');
+	background-size: 49px 49px;
 }
 
-.dot:before {
+.toggle.active{
+	background-image: url('./../imgs/page04-radio-checked.png');
+	background-size: 49px 49px;
+}
+
+/*.dot:before {
   content: ' \25CF';
   font-size: 63px;
   color:#FF1111;
-}
+}*/
 
 #countdown{
 	width:1080px;
@@ -193,11 +200,11 @@ img{
 }
 
 #smoking{
-	left:140px;
+	left:149px;
 }
 
 #uv{
-	left:633px;
+	left:644px;
 }
 
 #slider-handle{

@@ -127,13 +127,13 @@ var buttons = function() {
 	});
 
 	$('#uv').on('click', function(){
-		$(this).toggleClass('dot');
+		$(this).toggleClass('active');
 		$('#uv-overlay').toggle();
 		//add or remove the overlay
 	});
 
 	$('#smoking').on('click', function(){
-		$(this).toggleClass('dot');
+		$(this).toggleClass('active');
 		$('#smoking-overlay').toggle();
 		//add or remove the overlay
 	});

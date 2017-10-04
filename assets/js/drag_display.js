@@ -5,6 +5,7 @@ var original_half = function(){
 	app.stage.interactive = true;
 
 	divider = new PIXI.Sprite.fromImage('assets/imgs/divider.png');
+	now = new PIXI.Sprite.fromImage('assets/imgs/page04-text-now.png');
 	divider.x = 325;
 	divider.y = -17;
 
@@ -13,8 +14,12 @@ var original_half = function(){
 	var container = new PIXI.Container();
 
 	container.addChild(imgFromCanvas);
+    container.addChild(now);
     app.stage.addChild(container);
     app.stage.addChild(divider);
+
+    now.x = 5;
+    now.y = 5;
 	
 	var thing = new PIXI.Graphics();
 	app.stage.addChild(thing);

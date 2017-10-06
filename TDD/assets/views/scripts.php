@@ -26,3 +26,4 @@
 <script src='assets/js/backup.js'></script>
 <script src='assets/js/app.js'></script>
 <script src='assets/js/develop.js'></script>
+<script src='assets/js/rgba.js'></script>

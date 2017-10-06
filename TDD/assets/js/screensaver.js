@@ -1,6 +1,6 @@
 // i = 0;
 // //
-var image_paths = [];
+// var image_paths = [];
 
 // var flippingPhoto = setInterval(function(){
 // 						number = parseInt(Math.random()*1000);

@@ -143,6 +143,8 @@ var ageing = {
 			    this.overlay.x = 0;
 			    this.overlay.y = 0;
 			    app.stage.addChild(this.overlay);
+				app.renderer.render(app.stage);
+
 				
 			},
 } 

@@ -51,11 +51,11 @@ var take_snapshot_from_cam_stream = function(filetype, quality){
 
   // Make a copy of the current frame in the video on the canvas.
   context.translate(height/2, width/2);
-  context.scale(-1,-1);
+  context.scale(-1,1);
   context.drawImage(cam_stream[0], -height/2, -width/2, height, width);
 
   context2.translate(height/2, width/2);
-  context2.scale(-1,-1);
+  context2.scale(-1,1);
   context2.drawImage(cam_stream[0], -height/2, -width/2, height, width);
 
   // Turn the canvas image into a dataURL that can be used as a src for our photo.

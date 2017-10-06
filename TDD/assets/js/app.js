@@ -88,6 +88,8 @@ var buttons = function() {
 	});
 }
 
+var image_paths = [];
+
 var init = function(){
 
 	$.ajax({

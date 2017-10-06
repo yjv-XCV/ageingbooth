@@ -1,0 +1,20 @@
+{"frames": {
+
+"Screensaver foreground animation_1_00037.png":
+{
+	"frame": {"x":1,"y":1,"w":1080,"h":1920},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1080,"h":1920},
+	"sourceSize": {"w":1080,"h":1920}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "foreground37.png",
+	"format": "RGBA8888",
+	"size": {"w":1082,"h":1922},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:eeb177301aaee72d33e809eeba816f81:f947816d846e45402e20c8868c52ca78:3dcf6a12c1f448fac2a988f9d64694fb$"
+}
+}

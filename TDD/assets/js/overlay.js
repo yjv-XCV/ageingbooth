@@ -1,3 +1,5 @@
+var overlayImage;
+
 var ageing = {
 	launch : function() {
 
@@ -144,7 +146,9 @@ var ageing = {
 			    this.overlay.y = 0;
 			    app.stage.addChild(this.overlay);
 				app.renderer.render(app.stage);
-
+				setTimeout(function(){
+					overlayImage = app.renderer.extract.canvas(app.stage);
+				}, 4000);
 				
 			},
 } 
@@ -287,7 +291,6 @@ var uv = {
 			    this.overlay.x = 0;
 			    this.overlay.y = 0;
 			    app.stage.addChild(this.overlay);
-				
 			},
 
 } 

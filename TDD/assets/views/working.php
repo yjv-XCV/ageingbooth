@@ -26,7 +26,7 @@
 
 	<div id="page4" class="page" style="height: 1920px">
 		<canvas width="740" height="1012" id="image"></canvas>
-		<canvas width="740" height="1012" style="z-index: 2;" id="overlay"></canvas>
+		<canvas width="740" height="1012" style="z-index: 3;" id="overlay"></canvas>
 		<div id="age-overlay" style="display: none">
 			<canvas></canvas>
 		</div>

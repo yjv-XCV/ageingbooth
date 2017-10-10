@@ -41,7 +41,9 @@ $(function(){
     ageing.launch();
     uv.launch();
     smoking.launch();
-    showpage($('#page4'));
+    setTimeout(function(){
+      showpage($('#page4'));
+    }, 2000);
   }, false);
 
   // detect if tracker loses tracking of face
@@ -51,7 +53,9 @@ $(function(){
     ageing.launch();
     uv.launch();
     smoking.launch();
-    showpage($('#page4'));
+    setTimeout(function(){
+      showpage($('#page4'));
+    }, 2000);
   }, false);
 
   // detect if tracker has converged
@@ -63,7 +67,9 @@ $(function(){
     ageing.launch();
     uv.launch();
     smoking.launch();
-    showpage($('#page4'));
+    setTimeout(function(){
+      showpage($('#page4'));
+    }, 2000);
   }, false);
 
 });

@@ -25,9 +25,9 @@
 	</div>
 
 	<div id="page4" class="page" style="height: 1920px">
-		<canvas width="740" height="1012" id="image"></canvas>
+		<canvas width="740" height="1012" style="display:none" id="image"></canvas>
 		<canvas width="740" height="1012" style="z-index: 3;" id="overlay"></canvas>
-		<div id="age-overlay" style="display: none">
+		<div id="age-overlay">
 			<canvas></canvas>
 		</div>
 		<div width="740" height="1012" style="display: none;z-index: 3;" id="uv-overlay"></div>

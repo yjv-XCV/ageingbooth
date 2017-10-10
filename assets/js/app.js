@@ -60,9 +60,9 @@ var buttons = function() {
 		slide: function(event, ui){
 			// console.log(ui.value * 0.01 * 0.5);
 			// alpha value
-			if(typeof ageing.overlay != "undefined")ageing.overlay.alpha = (ui.value * 0.01 * 0.5);
-			if(typeof uv.overlay != "undefined")uv.overlay.alpha = (ui.value * 0.01 * 0.4);
-			if(typeof smoking.overlay != "undefined")smoking.overlay.alpha = (ui.value * 0.01 * 0.4);
+			if(typeof ageing.overlay != "undefined")ageing.overlay.alpha = (ui.value * 0.01);
+			if(typeof uv.overlay != "undefined")uv.overlay.alpha = (ui.value * 0.01);
+			if(typeof smoking.overlay != "undefined")smoking.overlay.alpha = (ui.value * 0.01);
 		}
 
 	});
@@ -142,13 +142,15 @@ var buttons = function() {
 
 	$('#uv').on('click', function(){
 		$(this).toggleClass('active');
-		$('#uv-overlay').toggle();
+		uv.overlay.visible = uv.overlay.visible ? 0 : 1;
+		// $('#uv-overlay').toggle();
 		//add or remove the overlay
 	});
 
 	$('#smoking').on('click', function(){
 		$(this).toggleClass('active');
-		$('#smoking-overlay').toggle();
+		smoking.overlay.visible = smoking.overlay.visible ? 0 : 1;
+		// $('#smoking-overlay').toggle();
 		//add or remove the overlay
 	});
 }

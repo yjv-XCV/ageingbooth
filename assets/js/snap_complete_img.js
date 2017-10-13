@@ -5,7 +5,7 @@ var last_render = function() {
 
   var app = new PIXI.Application(740, 1012, { view: last, forceCanvas: true, transparent: true });
 
-  if(typeof ageing.overlay != "undefined")ageing.overlay.alpha = 0.3;
+  if(typeof ageing.overlay != "undefined")ageing.overlay.alpha = 1;
 
   faceFromCanvas = new PIXI.Sprite(PIXI.Texture.fromCanvas(image));
   overlayFromCanvas = new PIXI.Sprite(PIXI.Texture.fromCanvas(overlay));
@@ -24,7 +24,7 @@ var last = {
 
     this.app = new PIXI.Application(740, 1012, { view: last, forceCanvas: true, transparent: true });
 
-    if(typeof ageing.overlay != "undefined")ageing.overlay.alpha = 0.3;
+    if(typeof ageing.overlay != "undefined")ageing.overlay.alpha = 1;
 
     faceFromCanvas = new PIXI.Sprite(PIXI.Texture.fromCanvas(image));
     overlayFromCanvas = new PIXI.Sprite(PIXI.Texture.fromCanvas(overlay));

@@ -130,7 +130,7 @@ var buttons = function() {
 	      $('#countdown').css('z-index','-1').text('');
 	      snap = take_snapshot_from_cam_stream('jpeg');
 	      original_half();
-	      // image_id =  upload_image_data('jpeg', snap);
+	      upload_original_image_data('jpeg', snap);
   	      // video.pause();
 	      //show page 3 things
 	      //hide page 2 things

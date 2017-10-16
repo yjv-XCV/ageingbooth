@@ -11,6 +11,7 @@
 <script src='vendor/libs/pixi.js'></script>
 <script src='vendor/libs/jquery.imgareaselect.pack.js'></script>
 <script src='vendor/jquery-ui/jquery-ui.min.js'></script>  
+<script src='vendor/libs/pixi-picture.js'></script>  
 
 <!-- Custom -->
 <script src='assets/js/detectface.js'></script>
@@ -26,4 +27,3 @@
 <script src='assets/js/backup.js'></script>
 <script src='assets/js/app.js'></script>
 <script src='assets/js/develop.js'></script>
-<script src='assets/js/rgba.js'></script>

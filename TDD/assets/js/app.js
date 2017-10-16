@@ -38,7 +38,7 @@ var buttons = function() {
 		slide: function(event, ui){
 			// console.log(ui.value * 0.01 * 0.5);
 			// alpha value
-			if(typeof ageing.overlay != "undefined")ageing.overlay.alpha = (ui.value * 0.01);
+			if(typeof ageing.overlay != "undefined")ageing.overlay.alpha = (ui.value * 0.01 * 0.6);
 			if(typeof uv.overlay != "undefined")uv.overlay.alpha = (ui.value * 0.01 * 0.4);
 			if(typeof smoking.overlay != "undefined")smoking.overlay.alpha = (ui.value * 0.01 * 0.4);
 		}

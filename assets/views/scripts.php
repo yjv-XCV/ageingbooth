@@ -11,6 +11,9 @@
 <script src='vendor/libs/pixi.js'></script>
 <script src='vendor/libs/jquery.imgareaselect.pack.js'></script>
 <script src='vendor/jquery-ui/jquery-ui.min.js'></script>  
+<script src='vendor/libs/pixi-picture.js'></script>  
+
+
 
 <!-- Custom -->
 <script src='assets/js/detectface.js'></script>

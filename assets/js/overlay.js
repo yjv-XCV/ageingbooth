@@ -139,7 +139,7 @@ var ageing = {
 			    	new Uint16Array([0,6,1,7,2,8,3,9,4,10,5,11,11,17,11,16,10,15,9,14,8,13,7,12,6,12,12,18,13,19,14,20,15,21,16,22,17,23,23,29,23,28,22,27,21,26,20,25,19,24,18,24,24,30,25,31,26,32,27,33,28,34,29,35,35,41,35,40,34,39,33,38,32,37,31,36,30])
 			    );
 			    
-			    this.protoType.alpha = 0.5;
+			    this.protoType.alpha = 1;
 			    this.protoType.x = 0;
 			    this.protoType.y = 0;
 			    app.stage.addChild(this.protoType);
@@ -158,8 +158,9 @@ var ageing = {
 				setTimeout(() => {
 					var overlay = PIXI.Texture.fromCanvas(app.view);
 					this.overlay = new PIXI.Sprite(overlay);
-					this.overlay.blendMode = PIXI.BLEND_MODES.ADD;
-					this.overlay.alpha = 1;
+					this.overlay.pluginName = 'picture';
+					this.overlay.blendMode = PIXI.BLEND_MODES.OVERLAY;
+					this.overlay.alpha = 0.6;
 					this.face.stage.addChild(this.overlay);
 					console.log('done');
 				}, 2000);
@@ -310,7 +311,8 @@ var uv = {
 				setTimeout(() => {
 					var overlay = PIXI.Texture.fromCanvas(app.view);
 					this.overlay = new PIXI.Sprite(overlay);
-					this.overlay.blendMode = PIXI.BLEND_MODES.ADD;
+					this.overlay.pluginName = 'picture';
+					this.overlay.blendMode = PIXI.BLEND_MODES.OVERLAY;
 					this.overlay.alpha = 1;
 					this.overlay.visible = 0;
 
@@ -470,7 +472,8 @@ var smoking = {
 				setTimeout(() => {
 					var overlay = PIXI.Texture.fromCanvas(app.view);
 					this.overlay = new PIXI.Sprite(overlay);
-					this.overlay.blendMode = PIXI.BLEND_MODES.ADD;
+					this.overlay.pluginName = 'picture';
+					this.overlay.blendMode = PIXI.BLEND_MODES.OVERLAY;
 					this.overlay.alpha = 1;
 					this.overlay.visible = 0;
 

@@ -60,7 +60,7 @@ var buttons = function() {
 		slide: function(event, ui){
 			// console.log(ui.value * 0.01 * 0.5);
 			// alpha value
-			if(typeof ageing.overlay != "undefined")ageing.overlay.alpha = (ui.value * 0.01);
+			if(typeof ageing.overlay != "undefined")ageing.overlay.alpha = (ui.value * 0.01 * 0.6);
 			if(typeof uv.overlay != "undefined")uv.overlay.alpha = (ui.value * 0.01);
 			if(typeof smoking.overlay != "undefined")smoking.overlay.alpha = (ui.value * 0.01);
 		}
@@ -130,7 +130,7 @@ var buttons = function() {
 	      $('#countdown').css('z-index','-1').text('');
 	      snap = take_snapshot_from_cam_stream('jpeg');
 	      original_half();
-	      upload_original_image_data('jpeg', snap);
+	      // upload_original_image_data('jpeg', snap);
   	      // video.pause();
 	      //show page 3 things
 	      //hide page 2 things

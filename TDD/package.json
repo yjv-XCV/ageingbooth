@@ -1,0 +1,16 @@
+{
+  "name": "ageingboothtest",
+  "version": "1.0.0",
+  "description": "##Page 1 Layout Problem Flipping Image Get Image",
+  "main": "index.js",
+  "dependencies": {
+    "build": "^0.1.4",
+    "pixi-picture": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

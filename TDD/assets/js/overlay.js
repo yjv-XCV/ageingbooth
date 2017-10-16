@@ -143,7 +143,7 @@ var ageing = {
 			    	new Uint16Array([0,6,1,7,2,8,3,9,4,10,5,11,11,17,11,16,10,15,9,14,8,13,7,12,6,12,12,18,13,19,14,20,15,21,16,22,17,23,23,29,23,28,22,27,21,26,20,25,19,24,18,24,24,30,25,31,26,32,27,33,28,34,29,35,35,41,35,40,34,39,33,38,32,37,31,36,30])
 			    );
 			    
-			    this.protoType.alpha = 0.5;
+			    this.protoType.alpha = 1;
 			    this.protoType.x = 0;
 			    this.protoType.y = 0;
 			    app.stage.addChild(this.protoType);
@@ -156,15 +156,20 @@ var ageing = {
 				});
 				$('#age-overlay').html(face.view);
 
-				setTimeout(() => {
-					var overlay = PIXI.Texture.fromCanvas(app.view);
-					var image = PIXI.Texture.fromCanvas($('#image')[0]);
-					this.overlay = new PIXI.Sprite(overlay);
-					var original = new PIXI.Sprite(image);
-					this.overlay.blendMode = PIXI.BLEND_MODES.ADD;
-					this.overlay.alpha = 1;
+				var image = PIXI.Texture.fromCanvas($('#image')[0]);
+				var original = new PIXI.Sprite(image);
+				face.stage.addChild(original);
+				face.stage.filters = [new PIXI.filters.VoidFilter()];
+				face.stage.filterArea = new PIXI.Rectangle(0, 0, 740, 1012);
 
-					face.stage.addChild(original);
+				setTimeout(() => {
+
+					var overlay = PIXI.Texture.fromCanvas(app.view);
+					this.overlay = new PIXI.Sprite(overlay);
+					this.overlay.pluginName = 'picture';
+					this.overlay.blendMode = PIXI.BLEND_MODES.OVERLAY;
+					this.overlay.alpha = 0.6;
+
 					face.stage.addChild(this.overlay);
 					console.log('done');
 				}, 2000);

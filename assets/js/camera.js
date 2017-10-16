@@ -51,14 +51,14 @@ var take_snapshot_from_cam_stream = function(filetype, quality){
 
   // Make a copy of the current frame in the video on the canvas.
   context.translate(height/2, width/2);
-  context.rotate(Math.PI/2);
-  context.scale(-1,-1);
-  context.drawImage(cam_stream[0], -width/2, -height/2, width, height);
+  // context.rotate(Math.PI/2);
+  context.scale(-1,1);
+  context.drawImage(cam_stream[0], 113, 0, 740/1012*740/2, 470, -height/2, -width/2, height, width);
 
-  context2.translate(height/2, width/2);
-  context2.rotate(Math.PI/2);
-  context2.scale(-1,-1);
-  context2.drawImage(cam_stream[0], -width/2, -height/2, width, height);
+  context2.translate(width/2, height/2);
+  // context2.rotate(Math.PI/2);
+  context2.scale(-1,1);
+  context2.drawImage(cam_stream[0], -width/2, -height/2, height, width);
 
   // Turn the canvas image into a dataURL that can be used as a src for our photo.
   return snap_canvas[0].toDataURL('image/' + filetype, quality);

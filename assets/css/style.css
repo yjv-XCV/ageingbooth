@@ -13,25 +13,13 @@ section.active{
 	display:block;
 }
 
-#cropvideo{
-	position: fixed;
-	top: 465px;
-	left:165px;
-	width: 740px;
-	height: 1012px;
-	overflow: hidden;
-	display: block;
-}
-
 video#cam-stream{
-	/*width: 1012px;*/
-	height: 1012px;
-	transform:scaleX(-1);
-	/*position:fixed;*/
-	/*top:597px;*/
-	/*left:30px;*/
-	/*top:465px;*/
-	margin-left: -334px;
+	width: 1012px;
+	height:740px;
+	transform:rotate(90deg) scaleX(-1);
+	position:fixed;
+	top:597px;
+	left:30px;
 }
 
 canvas{

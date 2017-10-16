@@ -5,9 +5,7 @@
 </div>
 <div>
 	<div id="page2" class="page">
-		<div id="cropvideo">
-			<video id="cam-stream"></video>
-		</div>
+		<video id="cam-stream"></video>
 		<canvas width="740" height="1012" id="face-temp"></canvas>
 		<div class="fixed flex-center" id="countdown"></div>
 		<div class="mybutton2" id="snap"></div>

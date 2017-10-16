@@ -46,7 +46,7 @@ var take_snapshot_from_cam_stream = function(filetype, quality){
   snap_canvas[0].height = width;
 
   snap_canvas2[0].width = height;
-  snap_canvas2[0].height = width;//
+  snap_canvas2[0].height = width;
 
 
   // Make a copy of the current frame in the video on the canvas.

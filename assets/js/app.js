@@ -179,7 +179,23 @@ var init = function(){
             console.log(status);
             console.log(msg);
           }
-        }); 
+        });
+
+	$(document).on({
+		'mousewheel' : (e) => {
+			e.preventDefault();
+		},
+		'swipe' : (e) => {
+			e.preventDefault();
+		},
+		'throttledresize' : (e) => {
+			e.preventDefault();
+		},
+		'touchmove' : (e) => {
+			if(e.originalEvent.changedTouches.length > 1)e.preventDefault();
+		}
+	}
+	);
 
 }
 

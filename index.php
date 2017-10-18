@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>Ageing Booth</title>
+		<!-- <meta name='viewport' content='user-scalable=0'/> -->
 		<?php $pagePath = 'assets/views/';?>
 		<?php include($pagePath . 'styles.php') ?>
 		<?php include($pagePath . 'scripts.php') ?>

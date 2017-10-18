@@ -1,6 +1,7 @@
 <!-- Libraries -->
 <script src='vendor/jquery-3.1.1.min.js'></script>
 <script src='vendor/libs/jquery.min.js'></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script src='vendor/semantic.min.js'></script>
 <!-- <script src='vendor/libs/model_pca_20_svm.js'></script> -->
 <!-- <script src='assets/js/model_pca_20_svm.js'></script> -->
@@ -11,7 +12,9 @@
 <script src='vendor/libs/pixi.js'></script>
 <script src='vendor/libs/jquery.imgareaselect.pack.js'></script>
 <script src='vendor/jquery-ui/jquery-ui.min.js'></script>  
-<script src='vendor/libs/pixi-picture.js'></script>  
+<script src="jquery.ui.touch-punch.min.js"></script>
+<script src='vendor/libs/pixi-picture.js'></script>
+
 
 
 

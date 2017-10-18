@@ -45,7 +45,7 @@ var buttons = function() {
 	$('#uv img').hide();
 	$('#smoking img').hide();
 
-	$('#sec01').on('click'/*Tap*/,function() {
+	$('#sec01').on('tap'/*Tap*/,function() {
 		$('#sec01').animate({
 			'opacity': '0',
 		},500);
@@ -54,6 +54,8 @@ var buttons = function() {
 		// homeFlag = 0;
 		// $(startInactivity);
 	});
+
+	// $('#slider').draggable();
 
 	$('#slider').slider({
 		value: 100,
@@ -67,23 +69,24 @@ var buttons = function() {
 
 	});
 
-	$('.home').on('click', function(){
+
+	$('.home').on('tap', function(){
 		$('.myModal').fadeIn(500);
 	});
 
-	$('#yes').on('click', function(){
+	$('#yes').on('tap', function(){
 		$(homepage);
 	});
 
-	$('#no').on('click', function(){
+	$('#no').on('tap', function(){
 		$('.myModal').fadeOut(500);
 	});
 
-	$('#retake').on('click', function(){
+	$('#retake').on('tap', function(){
 		showpage($('#page2'));
 	});
 
-	$('#confirm').on('click', function(){
+	$('#confirm').on('tap', function(){
 
 		var box = [81, 115, 550, 588];
 		detect_face(box);
@@ -92,7 +95,7 @@ var buttons = function() {
 		// showpage($('#page4'));
 	});
 
-	$('#done').on('click', function(){
+	$('#done').on('tap', function(){
 		last.render();
 		setTimeout(function(){
 			snap = last.snap('jpeg');
@@ -110,13 +113,13 @@ var buttons = function() {
 		}, 5000);
 	});
 
-	$('#retry').on('click', function(){
+	$('#retry').on('tap', function(){
 		showpage($('#page2'));
 	});
 
 
 
-	$('#snap').click(function(e){
+	$('#snap').on('tap', function(e){
 		//page 2 to page 3
 	    e.preventDefault();
 
@@ -140,14 +143,14 @@ var buttons = function() {
 
 	});
 
-	$('#uv').on('click', function(){
+	$('#uv').on('tap', function(){
 		$(this).toggleClass('active');
 		uv.overlay.visible = uv.overlay.visible ? 0 : 1;
 		// $('#uv-overlay').toggle();
 		//add or remove the overlay
 	});
 
-	$('#smoking').on('click', function(){
+	$('#smoking').on('tap', function(){
 		$(this).toggleClass('active');
 		smoking.overlay.visible = smoking.overlay.visible ? 0 : 1;
 		// $('#smoking-overlay').toggle();

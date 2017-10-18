@@ -33,30 +33,31 @@ var original_half = function(){
     thing.lineTo(740 / 2, 0);
 
     var isDragging = 0;
-    $('#half-face').on('mousedown', function(){
+    $('#half-face').on('touchstart', function(){
     	isDragging = 1;
     })
-    $('#half-face').on('mouseup', function(){
+    $('#half-face').on('touchend', function(){
     	isDragging = 0;
     });
-    $('#half-face').on('mouseleave', function(){
+    $('#half-face').on('touchleave', function(){
     	isDragging = 0;
-    })
+    });
 
-    $('#half-face').on('mousemove', function(event) {
+    $('#half-face').on('touchmove', function(event) {
     	if(isDragging){
 	    	left = $(this).position().left;
-	    	position = event.clientX - left;
+	    	position = event.originalEvent.changedTouches[0].clientX - left;
 	    	position = position < 10 ? 10 : position;
 	    	position = position > 1002 ? 1002 : position;
-
+	    	
 		    thing.clear();
 		    thing.moveTo(0, 0);
 		    thing.lineTo(0, 1012);
 		    thing.lineTo(position, 1012);
 		    thing.lineTo(position, 0);
 
-			divider.x = position - 45; }
+			divider.x = position - 45; 
+		}
 
 	    event.preventDefault();
 

@@ -60,7 +60,9 @@ var buttons = function() {
 		slide: function(event, ui){
 			// console.log(ui.value * 0.01 * 0.5);
 			// alpha value
-			if(typeof ageing.overlay != "undefined")ageing.overlay.alpha = (ui.value * 0.01 * 0.6);
+			if(typeof ageing.overlay1 != "undefined")ageing.overlay1.alpha = (ui.value * 0.01 * 0.6);
+			if(typeof ageing.overlay2 != "undefined")ageing.overlay2.alpha = (ui.value * 0.01 * 0.6);
+			if(typeof ageing.overlay3 != "undefined")ageing.overlay3.alpha = (ui.value * 0.01 * 0.6);
 			if(typeof uv.overlay != "undefined")uv.overlay.alpha = (ui.value * 0.01);
 			if(typeof smoking.overlay != "undefined")smoking.overlay.alpha = (ui.value * 0.01);
 		}
@@ -142,14 +144,16 @@ var buttons = function() {
 
 	$('#uv').on('click', function(){
 		$(this).toggleClass('active');
-		uv.overlay.visible = uv.overlay.visible ? 0 : 1;
+		ageing.overlay2.visible = ageing.overlay2.visible ? 0 : 1;
+		// uv.overlay.visible = uv.overlay.visible ? 0 : 1;
 		// $('#uv-overlay').toggle();
 		//add or remove the overlay
 	});
 
 	$('#smoking').on('click', function(){
 		$(this).toggleClass('active');
-		smoking.overlay.visible = smoking.overlay.visible ? 0 : 1;
+		ageing.overlay3.visible = ageing.overlay3.visible ? 0 : 1;
+		// smoking.overlay.visible = smoking.overlay.visible ? 0 : 1;
 		// $('#smoking-overlay').toggle();
 		//add or remove the overlay
 	});

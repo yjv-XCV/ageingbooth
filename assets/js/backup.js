@@ -36,47 +36,60 @@ backup = function(){
     mouth.x = position.mouth[0] - mouth_width / 2;
 	mouth.y = position.mouth[1] - mouth_height / 2;
 
-    left_eye.off('mousedown mouseup mousemove');
-    right_eye.off('mousedown mouseup mousemove');
-    mouth.off('mousedown mouseup mousemove');
+    left_eye.off('pointerdown pointerup pointermove');
+    right_eye.off('pointerdown pointerup pointermove');
+    mouth.off('pointerdown pointerup pointermove');
 
     var isDraggingA = 0, isDraggingB = 0, isDraggingC = 0;
-    left_eye.on('mousedown', function(){
+    left_eye.on('pointerdown', function(){
         isDraggingA = 1;
     });
-    right_eye.on('mousedown', function(){
+    right_eye.on('pointerdown', function(){
         isDraggingB = 1;
     });
-    mouth.on('mousedown', function(){
+    mouth.on('pointerdown', function(){
         isDraggingC = 1;
     });
 
-    left_eye.on('mouseup', function(){
+    left_eye.on('pointerup', function(){
         isDraggingA = 0;
     });
-    right_eye.on('mouseup', function(){
+    right_eye.on('pointerup', function(){
         isDraggingB = 0;
     });
-    mouth.on('mouseup', function(){
+    mouth.on('pointerup', function(){
         isDraggingC = 0;
     });
 
-    left_eye.on('mouseout', function(){
+    left_eye.on('pointerout', function(){
         isDraggingA = 0;
     });
-    right_eye.on('mouseout', function(){
+    right_eye.on('pointerout', function(){
         isDraggingB = 0;
     });
-    mouth.on('mouseout', function(){
+    mouth.on('pointerout', function(){
         isDraggingC = 0;
     });
 
-    left_eye.on('mousemove', (event) => {
+    left_eye.on('pointercancel', function(){
+        isDraggingA = 0;
+    });
+    right_eye.on('pointercancel', function(){
+        isDraggingB = 0;
+    });
+    mouth.on('pointercancel', function(){
+        isDraggingC = 0;
+    });
+
+    left_eye.on('pointermove', (event) => {
         var x = event.data.global.x,
-        y = event.data.global.y;        
+        y = event.data.global.y;
         if(isDraggingA){
+            console.log('left');
             x = x > 340 ? 340 : x;
             y = y > 506 ? 506 : y;
+            x = x < 20 ? 20 : x;
+            y = y < 20 ? 20 : y;
             left_eye.x = x - eye_width / 2;
             left_eye.y = y - eye_height / 2;
             position.leftEye = [x, y];
@@ -86,8 +99,11 @@ backup = function(){
             position.rightEye = [740 - x, y];
             // console.log(position.leftEye);
         } else if(isDraggingB){
+            console.log('right');
             x = x < 400 ? 400 : x;
             y = y > 506 ? 506 : y;
+            x = x > 720 ? 720 : x;
+            y = y < 20 ? 20 : y;
             left_eye.x = (740 - x) - eye_width / 2;
             left_eye.y = y - eye_height / 2;
             position.leftEye = [740 - x, y];
@@ -97,8 +113,10 @@ backup = function(){
             position.rightEye = [x, y];
             // console.log(position.rightEye);
         } else if(isDraggingC){
+            console.log('mouth');
             x = x > 520 ? 520 : x < 220 ? 220 : x;
             y = y < 506 ? 506 : y;
+            y = y > 1002 ? 1002 : y;
             mouth.x = x - mouth_width / 2;
             mouth.y = y - mouth_height / 2;
             position.mouth = [x, y];
@@ -106,7 +124,7 @@ backup = function(){
         }
     });
 
-    $('#confirm').on('click', function(){
+    $('#confirm').on('tap', function(){
         // tcs calculation
         tcs = [];
         for (var i = 0; i < 71; i++) {

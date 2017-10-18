@@ -164,7 +164,7 @@ var ageing = {
 					var overlay = PIXI.Texture.fromCanvas(app.view);
 					this.overlay1 = new PIXI.Sprite(overlay);
 					this.overlay1.pluginName = 'picture';
-					// this.overlay1.blendMode = PIXI.BLEND_MODES.SOFTLIGHT;
+					this.overlay1.blendMode = PIXI.BLEND_MODES.OVERLAY;
 					this.overlay1.alpha = 0.6;
 					this.face.stage.addChild(this.overlay1);
 					console.log('done');
@@ -330,8 +330,8 @@ var ageing = {
 					var overlay = PIXI.Texture.fromCanvas(app.view);
 					this.overlay2 = new PIXI.Sprite(overlay);
 					this.overlay2.pluginName = 'picture';
-					this.overlay2.blendMode = PIXI.BLEND_MODES.MULTIPLY;
-					this.overlay2.alpha = 0.7;
+					this.overlay2.blendMode = PIXI.BLEND_MODES.OVERLAY;
+					this.overlay2.alpha = 0.6;
 					this.face.stage.addChild(this.overlay2);
 					console.log('done');
 				}, 2000);
@@ -494,11 +494,11 @@ var ageing = {
 
 				setTimeout(() => {
 					var overlay = PIXI.Texture.fromCanvas(app.view);
-					this.overlay = new PIXI.Sprite(overlay);
-					this.overlay.pluginName = 'picture';
-					// this.overlay.blendMode = PIXI.BLEND_MODES.SOFTLIGHT;
-					this.overlay.alpha = 0.6;
-					this.face.stage.addChild(this.overlay);
+					this.overlay3 = new PIXI.Sprite(overlay);
+					this.overlay3.pluginName = 'picture';
+					this.overlay3.blendMode = PIXI.BLEND_MODES.OVERLAY;
+					this.overlay3.alpha = 0.6;
+					this.face.stage.addChild(this.overlay3);
 					console.log('done');
 				}, 2000);
 			},
@@ -649,7 +649,7 @@ var uv = {
 					var overlay = PIXI.Texture.fromCanvas(app.view);
 					this.overlay = new PIXI.Sprite(overlay);
 					this.overlay.pluginName = 'picture';
-					// this.overlay.blendMode = PIXI.BLEND_MODES.SOFTLIGHT;
+					this.overlay.blendMode = PIXI.BLEND_MODES.OVERLAY;
 					this.overlay.alpha = 1;
 					this.overlay.visible = 0;
 
@@ -808,13 +808,13 @@ var smoking = {
 				
 				setTimeout(() => {
 					var overlay = PIXI.Texture.fromCanvas(app.view);
-					this.overlay3 = new PIXI.Sprite(overlay);
-					this.overlay3.pluginName = 'picture';
-					this.overlay3.blendMode = PIXI.BLEND_MODES.OVERLAY;
-					this.overlay3.alpha = 1;
-					this.overlay3.visible = 0;
+					this.overlay = new PIXI.Sprite(overlay);
+					this.overlay.pluginName = 'picture';
+					this.overlay.blendMode = PIXI.BLEND_MODES.OVERLAY;
+					this.overlay.alpha = 1;
+					this.overlay.visible = 0;
 
-					ageing.face.stage.addChild(this.overlay3);
+					ageing.face.stage.addChild(this.overlay);
 					console.log('done');
 				}, 2000);
 				

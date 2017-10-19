@@ -198,9 +198,9 @@ var init = function(){
 		}
 	});
 
-	setTimeout(function() {
+	$(window).load(function(){
 		$('#init').fadeOut(500);
-	}, 5000);
+	});
 
 }
 

@@ -45,7 +45,7 @@ var buttons = function() {
 	$('#uv img').hide();
 	$('#smoking img').hide();
 
-	$('#sec01').on('tap'/*Tap*/,function() {
+	$('#sec01').on('touchstart'/*Tap*/,function() {
 		$('#sec01').animate({
 			'opacity': '0',
 		},500);
@@ -70,23 +70,23 @@ var buttons = function() {
 	});
 
 
-	$('.home').on('tap', function(){
+	$('.home').on('touchstart', function(){
 		$('.myModal').fadeIn(500);
 	});
 
-	$('#yes').on('tap', function(){
+	$('#yes').on('touchstart', function(){
 		$(homepage);
 	});
 
-	$('#no').on('tap', function(){
+	$('#no').on('touchstart', function(){
 		$('.myModal').fadeOut(500);
 	});
 
-	$('#retake').on('tap', function(){
+	$('#retake').on('touchstart', function(){
 		showpage($('#page2'));
 	});
 
-	$('#confirm').on('tap', function(){
+	$('#confirm').on('touchstart', function(){
 
 		var box = [81, 115, 550, 588];
 		detect_face(box);
@@ -95,7 +95,7 @@ var buttons = function() {
 		// showpage($('#page4'));
 	});
 
-	$('#done').on('tap', function(){
+	$('#done').on('touchstart', function(){
 		last.render();
 		setTimeout(function(){
 			snap = last.snap('jpeg');
@@ -113,13 +113,13 @@ var buttons = function() {
 		}, 5000);
 	});
 
-	$('#retry').on('tap', function(){
+	$('#retry').on('touchstart', function(){
 		showpage($('#page2'));
 	});
 
 
 
-	$('#snap').on('tap', function(e){
+	$('#snap').on('touchstart', function(e){
 		//page 2 to page 3
 	    e.preventDefault();
 
@@ -143,14 +143,14 @@ var buttons = function() {
 
 	});
 
-	$('#uv').on('tap', function(){
+	$('#uv').on('touchstart', function(){
 		$(this).toggleClass('active');
 		uv.overlay.visible = uv.overlay.visible ? 0 : 1;
 		// $('#uv-overlay').toggle();
 		//add or remove the overlay
 	});
 
-	$('#smoking').on('tap', function(){
+	$('#smoking').on('touchstart', function(){
 		$(this).toggleClass('active');
 		smoking.overlay.visible = smoking.overlay.visible ? 0 : 1;
 		// $('#smoking-overlay').toggle();

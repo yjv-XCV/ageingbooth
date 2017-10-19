@@ -94,9 +94,9 @@ backup = function(){
             left_eye.y = y - eye_height / 2;
             position.leftEye = [x, y];
 
-            right_eye.x = (740 - x) - eye_width / 2;
-            right_eye.y = y - eye_height / 2;
-            position.rightEye = [740 - x, y];
+            // right_eye.x = (740 - x) - eye_width / 2;
+            // right_eye.y = y - eye_height / 2;
+            // position.rightEye = [740 - x, y];
             // console.log(position.leftEye);
         } else if(isDraggingB){
             console.log('right');
@@ -104,9 +104,9 @@ backup = function(){
             y = y > 506 ? 506 : y;
             x = x > 720 ? 720 : x;
             y = y < 20 ? 20 : y;
-            left_eye.x = (740 - x) - eye_width / 2;
-            left_eye.y = y - eye_height / 2;
-            position.leftEye = [740 - x, y];
+            // left_eye.x = (740 - x) - eye_width / 2;
+            // left_eye.y = y - eye_height / 2;
+            // position.leftEye = [740 - x, y];
 
             right_eye.x = x - eye_width / 2;
             right_eye.y = y - eye_height / 2;

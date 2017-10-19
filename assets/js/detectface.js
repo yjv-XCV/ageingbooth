@@ -8,7 +8,7 @@ var ctracker = new clm.tracker({stopOnConvergence : true});
     ctracker.init();
 
 var drawLoop = function(t){
-  // console.log(t);
+  console.log(t);
   requestAnimFrame(drawLoop);
   overlay_cc.clearRect(0,0,840, 1120);
   ctracker.draw($('#overlay')[0]);

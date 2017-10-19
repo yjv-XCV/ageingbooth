@@ -200,7 +200,7 @@ var init = function(){
 
 	setTimeout(function() {
 		$('#init').fadeOut(500);
-	}, 2500);
+	}, 5000);
 
 }
 

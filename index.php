@@ -18,7 +18,7 @@
 			<?php include($pagePath .'working.php');?>
 		</section>
 		<?php include($pagePath .'quit_or_not.php');?>
-		<div id="init" class="loading fixed">
+		<div id="init" style="z-index: 10;" class="loading fixed">
 			<img src="assets/animation/loading.gif" style="width: 200px;height: 200px;z-index: 10;position: fixed;top: 860px; left: 440px">
 		</div>
 	</body>

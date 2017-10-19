@@ -23,7 +23,7 @@
 		<div class="mybutton3 home"></div>
 	</div>
 	
-	<div id="loading" class="fixed">
+	<div id="loading" class="loading fixed">
 		<img src="assets/animation/loading.gif" style="width: 200px;height: 200px;z-index: 3;position: fixed;top: 860px; left: 440px">
 	</div>
 

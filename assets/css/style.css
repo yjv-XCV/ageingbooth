@@ -14,12 +14,14 @@ section.active{
 }
 
 video#cam-stream{
-	width: 1020px;
-	height:760px;
+	width: 1012px;
+	/*height:760px;*/
 	transform:rotate(90deg) scaleX(-1);
-	position:fixed;
-	top:597px;
-	left:30px;
+	/*position:fixed;*/
+	/*top:597px;*/
+	/*left:30px;*/
+	margin-top: 126px;
+	margin-left: -126px;
 }
 
 #crop{
@@ -253,7 +255,7 @@ img{
 	left: 714px;
 }
 
-#loading{
+.loading{
 	width: 1080px;
 	height: 1920px;
 	background-color: white;

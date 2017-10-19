@@ -2,7 +2,7 @@ var ageing = {
 	launch : function() {
 		this.step1();
 		this.step2();
-		this.step3();
+		// this.step3();
 	},
 	step1 : function() {
 
@@ -165,7 +165,7 @@ var ageing = {
 					this.overlay1 = new PIXI.Sprite(overlay);
 					this.overlay1.pluginName = 'picture';
 					this.overlay1.blendMode = PIXI.BLEND_MODES.OVERLAY;
-					this.overlay1.alpha = 0.6;
+					this.overlay1.alpha = 0.7;
 					this.face.stage.addChild(this.overlay1);
 					console.log('done');
 				}, 2000);
@@ -218,8 +218,8 @@ var ageing = {
 				    //row four
 				    0.20357142857142857, 0.5946428571428571,
 				    0.3261904761904762, 0.5526785714285715,
-				    0.4142857142857143, 0.5508928571428572,
-				    0.5964285714285714, 0.5455357142857142,
+				    0.4342857142857143, 0.5508928571428572,
+				    0.5764285714285714, 0.5455357142857142,
 				    0.6952380952380952, 0.5491071428571429,
 				    0.8321428571428572, 0.6,
 
@@ -331,7 +331,7 @@ var ageing = {
 					this.overlay2 = new PIXI.Sprite(overlay);
 					this.overlay2.pluginName = 'picture';
 					this.overlay2.blendMode = PIXI.BLEND_MODES.OVERLAY;
-					this.overlay2.alpha = 0.6;
+					this.overlay2.alpha = 0.7;
 					this.face.stage.addChild(this.overlay2);
 					console.log('done');
 				}, 2000);
@@ -347,7 +347,9 @@ var ageing = {
 
 				var filter = new PIXI.filters.ColorMatrixFilter();
 				app.stage.filters = [filter];
-				filter.desaturate();
+				filter.colorTone({
+					desaturate:0.5,
+				});
 
 				var count = 0;
 				var vrtcs = new Float32Array(84);
@@ -497,7 +499,7 @@ var ageing = {
 					this.overlay3 = new PIXI.Sprite(overlay);
 					this.overlay3.pluginName = 'picture';
 					this.overlay3.blendMode = PIXI.BLEND_MODES.OVERLAY;
-					this.overlay3.alpha = 0.6;
+					this.overlay3.alpha = 0.7;
 					this.face.stage.addChild(this.overlay3);
 					console.log('done');
 				}, 2000);

@@ -62,7 +62,9 @@ var buttons = function() {
 		slide: function(event, ui){
 			// console.log(ui.value * 0.01 * 0.5);
 			// alpha value
-			if(typeof ageing.overlay != "undefined")ageing.overlay.alpha = (ui.value * 0.01 * 0.6);
+			if(typeof ageing.overlay1 != "undefined")ageing.overlay1.alpha = (ui.value * 0.01 * 0.6);
+			if(typeof ageing.overlay2 != "undefined")ageing.overlay2.alpha = (ui.value * 0.01 * 0.6);
+			if(typeof ageing.overlay3 != "undefined")ageing.overlay3.alpha = (ui.value * 0.01 * 0.6);
 			if(typeof uv.overlay != "undefined")uv.overlay.alpha = (ui.value * 0.01);
 			if(typeof smoking.overlay != "undefined")smoking.overlay.alpha = (ui.value * 0.01);
 		}
@@ -194,11 +196,16 @@ var init = function(){
 		'touchmove' : (e) => {
 			if(e.originalEvent.changedTouches.length > 1)e.preventDefault();
 		}
-	}
-	);
+	});
+
+	setTimeout(function() {
+		$('#init').fadeOut(500);
+	}, 2500);
 
 }
 
-$(init);
-$(init_cam);
-$(buttons);
+$(document).ready(function(){
+	$(init);
+	$(init_cam);
+	$(buttons);
+});

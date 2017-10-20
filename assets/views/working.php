@@ -18,6 +18,7 @@
 	<div id="page3" class="page">
 		<canvas width="740" height="1012" id="snap-canvas"></canvas>
 		<canvas width="740" height="1012" id="backup"></canvas>
+		<img src="assets/imgs/instruction.png" style="position:relative; top:1277px; left:-5px; width:739px;">
 		<div class="mybutton2"  id="retake"></div>
 		<div class="mybutton2"  id="confirm"></div>
 		<div class="mybutton3 home"></div>

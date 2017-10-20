@@ -58,7 +58,7 @@ var original_half = function(){
 
 			divider.x = position - 45; 
 		}
-
+		$(resetInactivity);
 	    event.preventDefault();
 
 	});

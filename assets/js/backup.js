@@ -122,6 +122,7 @@ backup = function(){
             position.mouth = [x, y];
             // console.log(position.mouth);
         }
+        $(resetInactivity);
     });
 
     $('#confirm').on('tap', function(){

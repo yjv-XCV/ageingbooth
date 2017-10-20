@@ -43,6 +43,8 @@ $(function(){
     smoking.launch();
     setTimeout(function(){
       showpage($('#page4'));
+      homeFlag = 0;
+      $(startInactivity);
     }, 2000);
   }, false);
 
@@ -55,6 +57,8 @@ $(function(){
     smoking.launch();
     setTimeout(function(){
       showpage($('#page4'));
+      homeFlag = 0;
+      $(startInactivity);
     }, 2000);
   }, false);
 
@@ -69,6 +73,8 @@ $(function(){
     smoking.launch();
     setTimeout(function(){
       showpage($('#page4'));
+      homeFlag = 0;
+      $(startInactivity);
     }, 2000);
   }, false);
 

@@ -51,8 +51,8 @@ var buttons = function() {
 		},500);
 		showpage($('#page2'));
 		$('#sec02').fadeIn(500);	
-		// homeFlag = 0;
-		// $(startInactivity);
+		homeFlag = 0;
+		$(startInactivity);
 	});
 
 	// $('#slider').draggable();
@@ -67,6 +67,7 @@ var buttons = function() {
 			if(typeof ageing.overlay3 != "undefined")ageing.overlay3.alpha = (ui.value * 0.01 * 0.6);
 			if(typeof uv.overlay != "undefined")uv.overlay.alpha = (ui.value * 0.01);
 			if(typeof smoking.overlay != "undefined")smoking.overlay.alpha = (ui.value * 0.01);
+			$(resetInactivity);
 		}
 
 	});
@@ -93,6 +94,8 @@ var buttons = function() {
 		var box = [81, 115, 550, 588];
 		detect_face(box);
 		//loading
+		homeFlag = 1;
+		$(stopInactivity);
 		$('#loading').fadeIn(300);
 		// showpage($('#page4'));
 	});
@@ -126,11 +129,11 @@ var buttons = function() {
 	    e.preventDefault();
 
 	    $('#snap').hide();
-	    // $('#countdown').css('z-index','1').text('5');
-	    // setTimeout(function(){$('#countdown').text('4')},1000);
-	    // setTimeout(function(){$('#countdown').text('3')},2000);
-	    // setTimeout(function(){$('#countdown').text('2')},3000);
-	    // setTimeout(function(){$('#countdown').text('1')},4000);
+	    $('#countdown').css('z-index','1').text('5');
+	    setTimeout(function(){$('#countdown').text('4')},1000);
+	    setTimeout(function(){$('#countdown').text('3')},2000);
+	    setTimeout(function(){$('#countdown').text('2')},3000);
+	    setTimeout(function(){$('#countdown').text('1')},4000);
 	    setTimeout(function(){
 	      $('#countdown').css('z-index','-1').text('');
 	      snap = take_snapshot_from_cam_stream('jpeg');
@@ -141,7 +144,7 @@ var buttons = function() {
 	      //hide page 2 things
 	      backup();
 	      showpage($('#page3'));
-	    }, 0);
+	    }, 5000);
 
 	});
 

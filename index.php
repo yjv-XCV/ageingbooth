@@ -8,9 +8,7 @@
 		<?php include($pagePath . 'scripts.php') ?>
 	</head>
 	<body>
-		<video class="background" playsinline autoplay muted loop>
-			<?php include($pagePath .'background.php') ?>
-		</video>
+		<video id="bgv" class="background" src="assets/videos/background.mp4" autoplay="autoplay" loop="loop"></video>
 		<section id="sec01" class="active">
 			<?php include($pagePath .'screensaver.php');?>
 		</section>

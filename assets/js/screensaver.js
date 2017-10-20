@@ -19,6 +19,7 @@ var flippingPhoto = setInterval(function(){
 					},500);
 
 $(function(){
+	$('#bgv')[0].play();
 
 	var app = new PIXI.Application(1080, 1920, {transparent: true});
 	$('#foreground').append(app.view);

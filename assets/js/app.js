@@ -1,11 +1,12 @@
 var homepage = function(){
-	$('#sec01').siblings('section').fadeOut(500);
-	$('.myModal').fadeOut(500);
-	$('#sec01').animate({
-		'opacity': '1',
-	},100);
-	homeFlag = 1;
-	$(stopInactivity);
+	location.reload();
+	// $('#sec01').siblings('section').fadeOut(500);
+	// $('.myModal').fadeOut(500);
+	// $('#sec01').animate({
+	// 	'opacity': '1',
+	// },100);
+	// homeFlag = 1;
+	// $(stopInactivity);
 }
 
 var showpage = function(page){

@@ -63,10 +63,14 @@ $(function(){
   }, false);
 
   // detect if tracker has converged
+  var temp_tcs
   document.addEventListener("clmtrackrConverged", function(event) {
     // alert('Converged!');
     console.log(ctracker.getScore() + ' success.');
-    tcs = ctracker.getCurrentPosition();
+    temp_tcs = ctracker.getCurrentPosition();
+    for(var i = 2;i <= 12;++i){
+      tcs[i] = temp_tcs[i];
+    }
     ctracker.stop();
     ageing.launch();
     uv.launch();

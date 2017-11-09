@@ -1,13 +1,13 @@
 var homeFlag = 1;
 var inactivity;
 var startInactivity = function(){
-	console.log('start');
+	// console.log('start');
 	inactivity = setTimeout(function(){
 					$(homepage);
 				},60000);
 	}
 var stopInactivity = function(){
-	console.log('pause');
+	// console.log('pause');
 	clearTimeout(inactivity);
 }
 

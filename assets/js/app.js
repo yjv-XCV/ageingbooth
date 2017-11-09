@@ -16,6 +16,8 @@ var showpage = function(page){
 			$('#snap').show();
 			$('#steps').show();
 			$(document).trigger('stepA');
+			$('#page3 #backup').remove();
+			$('#page3').append('<canvas width="740" height="1012" id="backup"></canvas>');
 			break;
 		case 3:
 			$(document).trigger('stepB');
@@ -122,8 +124,6 @@ var buttons = function() {
 	$('#retry').on('tap', function(){
 		showpage($('#page2'));
 	});
-
-
 
 	$('#snap').on('tap', function(e){
 		//page 2 to page 3

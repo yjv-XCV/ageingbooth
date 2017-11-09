@@ -1,3 +1,4 @@
+var isFirst = 1;
 backup = function(){
 	var app = new PIXI.Application(740, 1012, { view: $('#backup')[0], antialias: true, forceCanvas: true, transparent: true });
 	app.stage.interactive = true;
@@ -36,62 +37,84 @@ backup = function(){
     mouth.x = position.mouth[0] - mouth_width / 2;
 	mouth.y = position.mouth[1] - mouth_height / 2;
 
-    left_eye.off('pointerdown pointerup pointermove');
-    right_eye.off('pointerdown pointerup pointermove');
-    mouth.off('pointerdown pointerup pointermove');
+    left_eye.off('pointerdown pointerup pointercancel pointermove');
+    right_eye.off('pointerdown pointerup pointercancel pointermove');
+    mouth.off('pointerdown pointerup pointercancel pointermove');
 
-    var isDraggingA = 0, isDraggingB = 0, isDraggingC = 0;
+    // var isDraggingA = 0, isDraggingB = 0, isDraggingC = 0;
+    var isDragging = {
+        A : 0,
+        B : 0,
+        C : 0,
+        enable : function(val){
+            console.log(val + 'Pressed');
+            this.A = 0;
+            this.B = 0;
+            this.C = 0;
+            this[val] = 1;
+        },
+        disable : function(val){
+            console.log(val + 'Released');
+            this[val] = 0;
+        },
+    }
     left_eye.on('pointerdown', function(){
-        isDraggingA = 1;
-        isDraggingB = 0;
-        isDraggingC = 0;
+        // isDraggingA = 1;
+        // isDraggingB = 0;
+        // isDraggingC = 0;
+        isDragging.enable('A');
     });
     right_eye.on('pointerdown', function(){
-        isDraggingB = 1;
-        isDraggingA = 0;
-        isDraggingC = 0;
+        // isDraggingB = 1;
+        // isDraggingA = 0;
+        // isDraggingC = 0;
+        isDragging.enable('B');
     });
     mouth.on('pointerdown', function(){
-        isDraggingC = 1;
-        isDraggingB = 0;
-        isDraggingA = 0;
+        // isDraggingC = 1;
+        // isDraggingB = 0;
+        // isDraggingA = 0;
+        isDragging.enable('C');
     });
 
     left_eye.on('pointerup', function(){
-        isDraggingA = 0;
+        // isDraggingA = 0;
+        isDragging.disable('A');
     });
     right_eye.on('pointerup', function(){
-        isDraggingB = 0;
+        // isDraggingB = 0;
+        isDragging.disable('B');
     });
     mouth.on('pointerup', function(){
-        isDraggingC = 0;
+        // isDraggingC = 0;
+        isDragging.disable('C');
     });
 
-    left_eye.on('pointerout', function(){
-        isDraggingA = 0;
-    });
-    right_eye.on('pointerout', function(){
-        isDraggingB = 0;
-    });
-    mouth.on('pointerout', function(){
-        isDraggingC = 0;
-    });
+    // left_eye.on('pointerout', function(){
+    //     isDraggingA = 0;
+    // });
+    // right_eye.on('pointerout', function(){
+    //     isDraggingB = 0;
+    // });
+    // mouth.on('pointerout', function(){
+    //     isDraggingC = 0;
+    // });
 
-    left_eye.on('pointercancel', function(){
-        isDraggingA = 0;
-    });
-    right_eye.on('pointercancel', function(){
-        isDraggingB = 0;
-    });
-    mouth.on('pointercancel', function(){
-        isDraggingC = 0;
-    });
-
+    // left_eye.on('pointercancel', function(){
+    //     isDraggingA = 0;
+    // });
+    // right_eye.on('pointercancel', function(){
+    //     isDraggingB = 0;
+    // });
+    // mouth.on('pointercancel', function(){
+    //     isDraggingC = 0;
+    // });
+    
     left_eye.on('pointermove', (event) => {
-        var x = event.data.global.x,
-        y = event.data.global.y;
-        if(isDraggingA){
-            console.log('left');
+        if(isDragging.A){
+            var x = event.data.global.x,
+            y = event.data.global.y;
+            // console.log('left');
             x = x > 340 ? 340 : x;
             y = y > 506 ? 506 : y;
             x = x < 20 ? 20 : x;
@@ -104,8 +127,15 @@ backup = function(){
             // right_eye.y = y - eye_height / 2;
             // position.rightEye = [740 - x, y];
             // console.log(position.leftEye);
-        } else if(isDraggingB){
-            console.log('right');
+        }
+        $(resetInactivity);
+    });
+    right_eye.on('pointermove', (event) => {
+        
+        if(isDragging.B){      
+            var x = event.data.global.x,
+            y = event.data.global.y;
+            // console.log('right');
             x = x < 400 ? 400 : x;
             y = y > 506 ? 506 : y;
             x = x > 720 ? 720 : x;
@@ -118,8 +148,14 @@ backup = function(){
             right_eye.y = y - eye_height / 2;
             position.rightEye = [x, y];
             // console.log(position.rightEye);
-        } else if(isDraggingC){
-            console.log('mouth');
+        }
+        $(resetInactivity);
+    });
+    mouth.on('pointermove', (event) => {
+        if(isDragging.C){
+            var x = event.data.global.x,
+            y = event.data.global.y;
+            // console.log('mouth');
             x = x > 520 ? 520 : x < 220 ? 220 : x;
             y = y < 506 ? 506 : y;
             y = y > 1002 ? 1002 : y;

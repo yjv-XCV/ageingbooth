@@ -43,12 +43,18 @@ backup = function(){
     var isDraggingA = 0, isDraggingB = 0, isDraggingC = 0;
     left_eye.on('pointerdown', function(){
         isDraggingA = 1;
+        isDraggingB = 0;
+        isDraggingC = 0;
     });
     right_eye.on('pointerdown', function(){
         isDraggingB = 1;
+        isDraggingA = 0;
+        isDraggingC = 0;
     });
     mouth.on('pointerdown', function(){
         isDraggingC = 1;
+        isDraggingB = 0;
+        isDraggingA = 0;
     });
 
     left_eye.on('pointerup', function(){

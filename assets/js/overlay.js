@@ -165,7 +165,7 @@ var ageing = {
 					this.overlay1 = new PIXI.Sprite(overlay);
 					this.overlay1.pluginName = 'picture';
 					this.overlay1.blendMode = PIXI.BLEND_MODES.OVERLAY;
-					this.overlay1.alpha = 0.6;
+					this.overlay1.alpha = 0.6 * 0.65; // reduce to 65%
 					this.face.stage.addChild(this.overlay1);
 					console.log('done');
 				}, 2000);
@@ -331,7 +331,7 @@ var ageing = {
 					this.overlay2 = new PIXI.Sprite(overlay);
 					this.overlay2.pluginName = 'picture';
 					this.overlay2.blendMode = PIXI.BLEND_MODES.OVERLAY;
-					this.overlay2.alpha = 0.6;
+					this.overlay2.alpha = 0.6 * 0.65; // reduce to 65%
 					this.face.stage.addChild(this.overlay2);
 					console.log('done');
 				}, 2000);
@@ -497,7 +497,7 @@ var ageing = {
 					this.overlay3 = new PIXI.Sprite(overlay);
 					this.overlay3.pluginName = 'picture';
 					this.overlay3.blendMode = PIXI.BLEND_MODES.OVERLAY;
-					this.overlay3.alpha = 0.6;
+					this.overlay3.alpha = 0.6 * 0.65; // reduce to 65%
 					this.face.stage.addChild(this.overlay3);
 					console.log('done');
 				}, 2000);
@@ -650,7 +650,7 @@ var uv = {
 					this.overlay = new PIXI.Sprite(overlay);
 					this.overlay.pluginName = 'picture';
 					this.overlay.blendMode = PIXI.BLEND_MODES.OVERLAY;
-					this.overlay.alpha = 1;
+					this.overlay.alpha = 1 * 0.65; // reduce to 65%
 					this.overlay.visible = 0;
 
 					ageing.face.stage.addChild(this.overlay);
@@ -811,7 +811,7 @@ var smoking = {
 					this.overlay = new PIXI.Sprite(overlay);
 					this.overlay.pluginName = 'picture';
 					this.overlay.blendMode = PIXI.BLEND_MODES.OVERLAY;
-					this.overlay.alpha = 1;
+					this.overlay.alpha = 1 * 0.65; // reduce to 65%
 					this.overlay.visible = 0;
 
 					ageing.face.stage.addChild(this.overlay);
